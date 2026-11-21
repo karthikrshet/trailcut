@@ -9,16 +9,18 @@ dependencies = []
 package = false
 
 [tool.uv.workspace]
-members = ["packages/engine", "packages/agent", "apps/api"]
+members = ["packages/engine", "packages/ingest", "packages/agent", "apps/api"]
 
 [tool.uv.sources]
 trailcut-engine = { workspace = true }
+trailcut-ingest = { workspace = true }
 trailcut-agent = { workspace = true }
 trailcut-api = { workspace = true }
 
 [dependency-groups]
 dev = [
   "trailcut-engine",
+  "trailcut-ingest",
   "trailcut-agent",
   "trailcut-api",
   "pytest>=8.3",
@@ -34,7 +36,7 @@ dev = [
 [tool.ruff]
 line-length = 100
 target-version = "py312"
-src = ["packages/engine/src", "packages/agent/src", "apps/api/src", "scripts"]
+src = ["packages/engine/src", "packages/ingest/src", "packages/agent/src", "apps/api/src", "scripts"]
 extend-exclude = ["apps/web"]
 
 [tool.ruff.lint]
@@ -56,9 +58,14 @@ quote-style = "double"
 python_version = "3.12"
 strict = true
 warn_unreachable = true
-mypy_path = ["packages/engine/src", "packages/agent/src", "apps/api/src"]
+mypy_path = ["packages/engine/src", "packages/ingest/src", "packages/agent/src", "apps/api/src"]
 explicit_package_bases = true
 plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+# casparser ships no type information (no py.typed).
+module = ["casparser", "casparser.*"]
+ignore_missing_imports = true
 
 [tool.pydantic-mypy]
 init_forbid_extra = true
@@ -68,7 +75,7 @@ warn_required_dynamic_aliases = true
 # ---------- pytest ----------
 [tool.pytest.ini_options]
 addopts = "-ra --strict-markers --strict-config --import-mode=importlib"
-testpaths = ["packages/engine/tests", "packages/agent/tests", "apps/api/tests", "tests"]
+testpaths = ["packages/engine/tests", "packages/ingest/tests", "packages/agent/tests", "apps/api/tests", "tests"]
 markers = [
   "property: Hypothesis property-based tests",
   "api: FastAPI TestClient tests",

@@ -20,9 +20,11 @@ ENGINE_COVERAGE_MIN = 90
 
 PY_TYPED_PATHS = [
     "packages/engine/src",
+    "packages/ingest/src",
     "packages/agent/src",
     "apps/api/src",
     "packages/engine/tests",
+    "packages/ingest/tests",
     "packages/agent/tests",
     "apps/api/tests",
     "tests",
@@ -59,13 +61,14 @@ def check() -> None:
 
 
 def test_unit() -> None:
-    """Engine, agent and repo-policy tests (incl. Hypothesis) with the engine coverage gate."""
+    """Engine, ingest, agent and policy tests (incl. Hypothesis); engine coverage gate."""
     run(
         [
             PY,
             "-m",
             "pytest",
             "packages/engine/tests",
+            "packages/ingest/tests",
             "packages/agent/tests",
             "tests",
             "-q",

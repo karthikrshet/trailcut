@@ -137,6 +137,36 @@ def _git_ls_files(*patterns: str) -> list[str]:
     return [line for line in result.stdout.splitlines() if line]
 
 
+INGEST_SRC = ROOT / "packages" / "ingest" / "src" / "trailcut_ingest"
+# Ingestion holds PDFs, passwords and PII in memory. It must never persist or emit them.
+FORBIDDEN_INGEST_IMPORTS = {"logging", "tempfile", "pickle", "shelve", "sqlite3", "shutil", "os"}
+FORBIDDEN_INGEST_CALLS = {"print", "open", "breakpoint", "eval", "exec"}
+
+
+def ingest_files() -> list[Path]:
+    files = sorted(INGEST_SRC.rglob("*.py"))
+    assert files, "ingest sources not found"
+    return files
+
+
+@pytest.mark.parametrize("path", ingest_files(), ids=lambda p: p.name)
+def test_ingest_never_logs_or_persists(path: str | Path) -> None:
+    path = Path(path)
+    for node in ast.walk(parse(path)):
+        if isinstance(node, ast.Import):
+            names = [alias.name for alias in node.names]
+        elif isinstance(node, ast.ImportFrom) and node.module and node.level == 0:
+            names = [node.module]
+        else:
+            names = []
+        for name in names:
+            assert name.split(".")[0] not in FORBIDDEN_INGEST_IMPORTS, f"{path.name}: {name}"
+        if isinstance(node, ast.Name) and node.id in FORBIDDEN_INGEST_CALLS:
+            pytest.fail(f"{path.name}:{node.lineno}: forbidden name {node.id!r}")
+        if isinstance(node, ast.Attribute) and node.attr in {"write_text", "write_bytes", "dump"}:
+            pytest.fail(f"{path.name}:{node.lineno}: file write {node.attr!r}")
+
+
 def test_no_real_statements_are_committed() -> None:
     tracked = _git_ls_files("*.pdf", "*.PDF")
     allowed = [f for f in tracked if Path(f).name.startswith("synthetic_")]
@@ -149,6 +179,7 @@ def test_no_real_statements_are_committed() -> None:
         "apps/web",
         "apps/api",
         "packages/engine",
+        "packages/ingest",
         "packages/agent",
         "data/tax_rules",
         "evals",
