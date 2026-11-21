@@ -73,7 +73,12 @@ markers = [
   "property: Hypothesis property-based tests",
   "api: FastAPI TestClient tests",
 ]
-filterwarnings = ["error"]
+filterwarnings = [
+  "error",
+  # Starlette 1.10 deprecates httpx as the TestClient transport in favour of a new
+  # package we have not vetted yet. Revisit when FastAPI's docs settle on it.
+  "ignore:Using `httpx` with `starlette.testclient` is deprecated",
+]
 
 [tool.coverage.run]
 branch = true
