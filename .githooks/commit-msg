@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+# Enforce Conventional Commits on the subject line.
+subject=$(head -n 1 "$1")
+case "$subject" in
+  Merge\ *|Revert\ *|fixup!\ *|squash!\ *) exit 0 ;;
+esac
+if ! printf '%s' "$subject" | grep -Eq '^(feat|fix|test|docs|chore|ci|refactor|perf|build|style|revert)(\([a-z0-9-]+\))?!?: .{1,100}$'; then
+  echo "commit-msg: subject must follow Conventional Commits, e.g. 'feat(engine): add FIFO lot matcher'" >&2
+  echo "  got: $subject" >&2
+  exit 1
+fi

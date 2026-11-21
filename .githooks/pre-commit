@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+# TrailCut pre-commit: every commit must pass `make check && make test` (CLAUDE.md rule 7).
+# Enable once per clone with: make hooks   (or: git config core.hooksPath .githooks)
+# Never bypass with --no-verify.
+set -e
+
+if ! command -v uv >/dev/null 2>&1; then
+  echo "pre-commit: uv not found on PATH; install it (https://docs.astral.sh/uv/)" >&2
+  exit 1
+fi
+
+echo "pre-commit: make check"
+uv run python scripts/dev.py check
+echo "pre-commit: make test"
+uv run python scripts/dev.py test
