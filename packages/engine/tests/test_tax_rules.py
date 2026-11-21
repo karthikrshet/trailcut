@@ -12,6 +12,7 @@ from trailcut_engine.tax_rules import TaxRules, TaxRulesError, fy_label, parse_t
 
 RULES_DIR = Path(__file__).resolve().parents[3] / "data" / "tax_rules"
 FY2026_27_TEXT = (RULES_DIR / "fy2026_27.yaml").read_text(encoding="utf-8")
+SHIPPED_RULES = parse_tax_rules(FY2026_27_TEXT)
 
 
 def load_raw() -> dict[str, Any]:
@@ -90,7 +91,7 @@ def test_covers_boundaries(rules: TaxRules, on: date, expected: bool) -> None:
 @pytest.mark.property
 @given(on=st.dates(min_value=date(2000, 1, 1), max_value=date(2100, 12, 31)))
 def test_covers_matches_period(on: date) -> None:
-    rules = parse_tax_rules(FY2026_27_TEXT)
+    rules = SHIPPED_RULES
     assert rules.covers(on) == (rules.effective_from <= on <= rules.effective_to)
 
 
