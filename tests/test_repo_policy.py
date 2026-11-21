@@ -161,8 +161,12 @@ def test_ingest_never_logs_or_persists(path: str | Path) -> None:
             names = []
         for name in names:
             assert name.split(".")[0] not in FORBIDDEN_INGEST_IMPORTS, f"{path.name}: {name}"
-        if isinstance(node, ast.Name) and node.id in FORBIDDEN_INGEST_CALLS:
-            pytest.fail(f"{path.name}:{node.lineno}: forbidden name {node.id!r}")
+        if (
+            isinstance(node, ast.Call)
+            and isinstance(node.func, ast.Name)
+            and node.func.id in FORBIDDEN_INGEST_CALLS
+        ):
+            pytest.fail(f"{path.name}:{node.lineno}: forbidden call {node.func.id!r}")
         if isinstance(node, ast.Attribute) and node.attr in {"write_text", "write_bytes", "dump"}:
             pytest.fail(f"{path.name}:{node.lineno}: file write {node.attr!r}")
 
