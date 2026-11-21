@@ -9,7 +9,7 @@ fixed, and who or what do I tell.
 | [Bad tax-rule deploy](bad-tax-rule-deploy.md) | Wrong rate or date shipped in `data/tax_rules` | Ready |
 | LLM outage | Claude API errors or timeouts; chat degraded | Sprint 7 |
 | AMFI data outage | NAV/TER refresh fails; stale-data alert | Sprint 5 |
-| Parser failures spike | CAS parse error rate above baseline | Sprint 2 |
+| [Parser failures spike](parser-failures.md) | CAS parse error rate above baseline | Ready |
 
 ## Template
 
