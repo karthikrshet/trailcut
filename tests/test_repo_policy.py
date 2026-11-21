@@ -146,6 +146,7 @@ def test_no_real_statements_are_committed() -> None:
 @pytest.mark.parametrize(
     "path",
     [
+        "apps/web",
         "apps/api",
         "packages/engine",
         "packages/agent",
