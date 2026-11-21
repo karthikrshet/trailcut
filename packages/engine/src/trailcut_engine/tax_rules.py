@@ -19,7 +19,6 @@ import yaml
 from pydantic import (
     AfterValidator,
     BaseModel,
-    BeforeValidator,
     ConfigDict,
     Field,
     HttpUrl,
@@ -27,22 +26,13 @@ from pydantic import (
     model_validator,
 )
 
+from trailcut_engine.types import NoFloat
+
 SUPPORTED_SCHEMA_VERSION = 1
 
 
 class TaxRulesError(ValueError):
     """Raised when tax-rule YAML is malformed or violates the schema."""
-
-
-def _reject_float(value: object) -> object:
-    """Refuse floats and booleans so rates are never rounded through binary floats."""
-    if isinstance(value, bool):
-        msg = f"booleans are not valid rule values: {value!r}"
-        raise ValueError(msg)
-    if isinstance(value, float):
-        msg = f"floats are not allowed in tax rules; quote the value: {value!r}"
-        raise ValueError(msg)
-    return value
 
 
 def _require_https(url: HttpUrl) -> HttpUrl:
@@ -66,7 +56,6 @@ def _non_negative(value: Decimal) -> Decimal:
     return value
 
 
-NoFloat = BeforeValidator(_reject_float)
 Rate = Annotated[Decimal, AfterValidator(_fraction), NoFloat]
 Rupees = Annotated[Decimal, AfterValidator(_non_negative), NoFloat]
 PositiveInt = Annotated[int, Field(gt=0), NoFloat]
