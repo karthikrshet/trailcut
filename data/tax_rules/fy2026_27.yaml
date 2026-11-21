@@ -1,0 +1,66 @@
+# TrailCut tax rules for FY 2026-27 (1 Apr 2026 - 31 Mar 2027).
+#
+# This file is the ONLY place tax rates, exemptions and holding periods live
+# (CLAUDE.md hard rule 3). Every value is a quoted string so it parses to
+# Decimal exactly; unquoted floats are rejected by the loader.
+#
+# To change anything here, follow .claude/skills/tax-rule-change/SKILL.md.
+#
+# Legal basis: the Income-tax Act, 2025 applies from 1 Apr 2026 and carries over
+# the capital-gains rates of the Income-tax Act, 1961 as amended by the Finance
+# (No. 2) Act, 2024 (s.111A, s.112A, s.50AA). Budget 2026 left them unchanged.
+
+schema_version: 1
+financial_year: "2026-27"
+effective_from: 2026-04-01
+effective_to: 2027-03-31
+
+equity:
+  stcg_rate:
+    value: "0.20"
+    legal_ref: "IT Act 1961 s.111A as amended by Finance (No. 2) Act 2024 (from 23 Jul 2024)"
+    source_url: "https://incometaxindia.gov.in/Pages/acts/income-tax-act.aspx"
+  ltcg_rate:
+    value: "0.125"
+    legal_ref: "IT Act 1961 s.112A as amended by Finance (No. 2) Act 2024 (from 23 Jul 2024)"
+    source_url: "https://incometaxindia.gov.in/Pages/acts/income-tax-act.aspx"
+  ltcg_exemption_per_fy:
+    value: "125000"
+    legal_ref: "IT Act 1961 s.112A(1) proviso: first Rs 1.25 lakh of LTCG per FY exempt"
+    source_url: "https://incometaxindia.gov.in/Pages/acts/income-tax-act.aspx"
+  long_term_after_months:
+    value: "12"
+    legal_ref: "IT Act 1961 s.2(42A): equity-oriented fund units are long-term if held more than 12 months"
+    source_url: "https://incometaxindia.gov.in/Pages/acts/income-tax-act.aspx"
+  equity_oriented_min_equity_share:
+    value: "0.65"
+    legal_ref: "IT Act 1961 s.112A Explanation: equity-oriented fund holds at least 65% listed equity"
+    source_url: "https://incometaxindia.gov.in/Pages/acts/income-tax-act.aspx"
+  grandfathering_fmv_date:
+    value: "2018-01-31"
+    legal_ref: "IT Act 1961 s.55(2)(ac): units acquired before 1 Feb 2018 use FMV on 31 Jan 2018 as cost"
+    source_url: "https://incometaxindia.gov.in/Pages/acts/income-tax-act.aspx"
+  elss_lock_in_years:
+    value: "3"
+    legal_ref: "Equity Linked Savings Scheme, 2005 (notified u/s 80C): 3-year lock-in per purchase"
+    source_url: "https://incometaxindia.gov.in/Pages/acts/income-tax-act.aspx"
+
+debt:
+  specified_fund_cutoff_date:
+    value: "2023-04-01"
+    legal_ref: "IT Act 1961 s.50AA: debt-fund units acquired on/after 1 Apr 2023 taxed as short-term at slab"
+    source_url: "https://incometaxindia.gov.in/Pages/acts/income-tax-act.aspx"
+  legacy_long_term_after_months:
+    value: "24"
+    legal_ref: "IT Act 1961 s.2(42A) as amended by Finance (No. 2) Act 2024: unlisted units long-term after 24 months"
+    source_url: "https://incometaxindia.gov.in/Pages/acts/income-tax-act.aspx"
+  legacy_ltcg_rate:
+    value: "0.125"
+    legal_ref: "IT Act 1961 s.112 as amended by Finance (No. 2) Act 2024: 12.5% without indexation"
+    source_url: "https://incometaxindia.gov.in/Pages/acts/income-tax-act.aspx"
+
+surcharge_and_cess:
+  health_education_cess_rate:
+    value: "0.04"
+    legal_ref: "Finance Act: Health and Education Cess at 4% of income tax plus surcharge"
+    source_url: "https://incometaxindia.gov.in/Pages/acts/income-tax-act.aspx"
