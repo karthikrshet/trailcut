@@ -1,0 +1,28 @@
+# Runbooks
+
+Short, step-by-step guides for operating TrailCut in production. Each runbook
+answers: how do I know it is happening, what do I do first, how do I confirm it is
+fixed, and who or what do I tell.
+
+| Runbook | Trigger | Status |
+| --- | --- | --- |
+| [Bad tax-rule deploy](bad-tax-rule-deploy.md) | Wrong rate or date shipped in `data/tax_rules` | Ready |
+| LLM outage | Claude API errors or timeouts; chat degraded | Sprint 7 |
+| AMFI data outage | NAV/TER refresh fails; stale-data alert | Sprint 5 |
+| Parser failures spike | CAS parse error rate above baseline | Sprint 2 |
+
+## Template
+
+```markdown
+# <Title>
+
+**Detect:** alert name / symptom
+**Impact:** what users see
+**First 5 minutes:** numbered steps
+**Fix:** numbered steps
+**Verify:** how to confirm recovery
+**Follow-up:** postmortem, tests to add
+```
+
+Runbooks must never ask anyone to look at a user's PDF, PAN, email, phone or folio
+number. TrailCut does not keep them.
