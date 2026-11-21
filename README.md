@@ -12,7 +12,9 @@ orders and never names funds to buy.
 
 ## Status
 
-Sprint 1 (foundation): monorepo, tooling, CI, repo rules. The product itself is not built yet.
+Sprint 1 (foundation) is done: monorepo, tooling, CI, repo rules, the FY 2026-27 tax-rule
+file with its typed loader, and the web shell. CAS ingestion, the engine and the agents
+come in the next sprints.
 
 ## Layout
 
@@ -29,11 +31,18 @@ Sprint 1 (foundation): monorepo, tooling, CI, repo rules. The product itself is 
 
 ## Run locally
 
+Needs [uv](https://docs.astral.sh/uv/), Node 22 and pnpm.
+
 ```bash
-uv sync
-pnpm install
-make check && make test
+make install        # uv sync, pnpm install, enable git hooks
+make check          # ruff, mypy --strict, eslint, tsc
+make test           # pytest + Hypothesis (engine coverage >= 90%), API, Vitest
+make e2e            # Playwright, desktop + 375px
+make dev            # API on :8000, web on :5173
 ```
+
+No `make` (e.g. Windows)? Run `uv run python scripts/dev.py <target>` instead.
+Every commit runs `check` and `test` through the pre-commit hook.
 
 See [CLAUDE.md](CLAUDE.md) for the rules every change follows.
 
