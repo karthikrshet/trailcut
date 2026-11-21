@@ -1,0 +1,6 @@
+packages:
+  - apps/web
+
+# Blade lists React Native peers for its native build; the web app must not pull them in.
+autoInstallPeers: false
+strictPeerDependencies: false
