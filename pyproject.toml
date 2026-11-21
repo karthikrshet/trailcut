@@ -1,0 +1,84 @@
+[project]
+name = "trailcut"
+version = "0.0.0"
+description = "TrailCut monorepo root (uv workspace)"
+requires-python = ">=3.12,<3.13"
+dependencies = []
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = ["packages/engine", "packages/agent", "apps/api"]
+
+[tool.uv.sources]
+trailcut-engine = { workspace = true }
+trailcut-agent = { workspace = true }
+trailcut-api = { workspace = true }
+
+[dependency-groups]
+dev = [
+  "trailcut-engine",
+  "trailcut-agent",
+  "trailcut-api",
+  "pytest>=8.3",
+  "pytest-cov>=6.0",
+  "hypothesis>=6.120",
+  "ruff>=0.8",
+  "mypy>=1.13",
+  "types-PyYAML>=6.0",
+  "httpx>=0.28",
+]
+
+# ---------- ruff ----------
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["packages/engine/src", "packages/agent/src", "apps/api/src", "scripts"]
+extend-exclude = ["apps/web"]
+
+[tool.ruff.lint]
+select = [
+  "E", "W", "F", "I", "B", "UP", "N", "S", "C4", "SIM", "RUF", "PT", "DTZ", "T20", "PL", "ANN",
+]
+ignore = ["PLR0913", "PLR2004"]
+
+[tool.ruff.lint.per-file-ignores]
+"**/tests/**" = ["S101", "ANN", "PLR2004", "S603"]
+"tests/**" = ["S101", "ANN", "PLR2004", "S603"]
+"scripts/**" = ["T201", "S603", "S607"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+# ---------- mypy ----------
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unreachable = true
+mypy_path = ["packages/engine/src", "packages/agent/src", "apps/api/src"]
+explicit_package_bases = true
+plugins = ["pydantic.mypy"]
+
+[tool.pydantic-mypy]
+init_forbid_extra = true
+init_typed = true
+warn_required_dynamic_aliases = true
+
+# ---------- pytest ----------
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers --strict-config --import-mode=importlib"
+testpaths = ["packages/engine/tests", "packages/agent/tests", "apps/api/tests", "tests"]
+markers = [
+  "property: Hypothesis property-based tests",
+  "api: FastAPI TestClient tests",
+]
+filterwarnings = ["error"]
+
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+exclude_also = ["if TYPE_CHECKING:", "raise NotImplementedError"]

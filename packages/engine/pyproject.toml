@@ -1,0 +1,16 @@
+[project]
+name = "trailcut-engine"
+version = "0.0.0"
+description = "TrailCut pure finance engine: XIRR, FIFO lots, tax, exit loads, switch optimizer. No I/O, no LLM."
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "pydantic>=2.10",  # typed, validated engine inputs/outputs
+  "pyyaml>=6.0",     # parse tax-rule YAML text (string in, model out; no file I/O in engine)
+]
+
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/trailcut_engine"]
