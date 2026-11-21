@@ -1,0 +1,3986 @@
+{
+ "statement_period": {
+  "from": "01-Jan-2016",
+  "to": "20-Nov-2026"
+ },
+ "folios": [
+  {
+   "folio": "DEMO10001/01",
+   "amc": "Sample Mutual Fund",
+   "name": "Demo Investor",
+   "PAN": "AAAPZ0000Z",
+   "KYC": "OK",
+   "PANKYC": "OK",
+   "schemes": [
+    {
+     "scheme": "Sample Flexi Cap Fund - Regular Plan - Growth",
+     "advisor": "ARN-000001",
+     "rta_code": "900001",
+     "rta": "CAMS",
+     "type": "EQUITY",
+     "isin": "INF000S01011",
+     "amfi": "900001",
+     "nominees": [
+      "Demo Nominee"
+     ],
+     "open": "0.000",
+     "close": "7463.655",
+     "close_calculated": "7463.655",
+     "valuation": {
+      "date": "20-Nov-2026",
+      "nav": "148.8896",
+      "value": "1111260.61",
+      "cost": "580436.25"
+     },
+     "transactions": [
+      {
+       "date": "05-Jan-2016",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "125.000",
+       "nav": "40.0000",
+       "balance": "125.000",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Feb-2016",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "125.647",
+       "nav": "39.7940",
+       "balance": "250.647",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Mar-2016",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "121.084",
+       "nav": "41.2936",
+       "balance": "371.731",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Apr-2016",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "122.179",
+       "nav": "40.9236",
+       "balance": "493.910",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-May-2016",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "117.652",
+       "nav": "42.4983",
+       "balance": "611.562",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jun-2016",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "121.609",
+       "nav": "41.1155",
+       "balance": "733.171",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jul-2016",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "117.287",
+       "nav": "42.6306",
+       "balance": "850.458",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Aug-2016",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "116.590",
+       "nav": "42.8854",
+       "balance": "967.048",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Sep-2016",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "117.193",
+       "nav": "42.6646",
+       "balance": "1084.241",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Oct-2016",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "112.937",
+       "nav": "44.2724",
+       "balance": "1197.178",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Nov-2016",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "113.959",
+       "nav": "43.8756",
+       "balance": "1311.137",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Dec-2016",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "109.736",
+       "nav": "45.5639",
+       "balance": "1420.873",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jan-2017",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "113.427",
+       "nav": "44.0814",
+       "balance": "1534.300",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Feb-2017",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "109.395",
+       "nav": "45.7058",
+       "balance": "1643.695",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Mar-2017",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "108.745",
+       "nav": "45.9790",
+       "balance": "1752.440",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Apr-2017",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "109.308",
+       "nav": "45.7422",
+       "balance": "1861.748",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-May-2017",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "105.339",
+       "nav": "47.4660",
+       "balance": "1967.087",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jun-2017",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "106.291",
+       "nav": "47.0406",
+       "balance": "2073.378",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jul-2017",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "102.353",
+       "nav": "48.8507",
+       "balance": "2175.731",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Aug-2017",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "105.795",
+       "nav": "47.2612",
+       "balance": "2281.526",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Sep-2017",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "102.035",
+       "nav": "49.0028",
+       "balance": "2383.561",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Oct-2017",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "101.429",
+       "nav": "49.2957",
+       "balance": "2484.990",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Nov-2017",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "101.954",
+       "nav": "49.0418",
+       "balance": "2586.944",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Dec-2017",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "98.251",
+       "nav": "50.8900",
+       "balance": "2685.195",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jan-2018",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "99.140",
+       "nav": "50.4339",
+       "balance": "2784.335",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Feb-2018",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "95.466",
+       "nav": "52.3745",
+       "balance": "2879.801",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Mar-2018",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "98.677",
+       "nav": "50.6704",
+       "balance": "2978.478",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Apr-2018",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "95.170",
+       "nav": "52.5377",
+       "balance": "3073.648",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-May-2018",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "94.605",
+       "nav": "52.8516",
+       "balance": "3168.253",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jun-2018",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "95.094",
+       "nav": "52.5795",
+       "balance": "3263.347",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jul-2018",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "91.641",
+       "nav": "54.5609",
+       "balance": "3354.988",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Aug-2018",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "92.469",
+       "nav": "54.0719",
+       "balance": "3447.457",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Sep-2018",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "89.043",
+       "nav": "56.1526",
+       "balance": "3536.500",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Oct-2018",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "92.038",
+       "nav": "54.3256",
+       "balance": "3628.538",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Nov-2018",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "88.767",
+       "nav": "56.3275",
+       "balance": "3717.305",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Dec-2018",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "88.239",
+       "nav": "56.6641",
+       "balance": "3805.544",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jan-2019",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "88.696",
+       "nav": "56.3723",
+       "balance": "3894.240",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Feb-2019",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "85.475",
+       "nav": "58.4967",
+       "balance": "3979.715",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Mar-2019",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "86.248",
+       "nav": "57.9724",
+       "balance": "4065.963",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Apr-2019",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "83.052",
+       "nav": "60.2032",
+       "balance": "4149.015",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-May-2019",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "85.845",
+       "nav": "58.2443",
+       "balance": "4234.860",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jun-2019",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "82.794",
+       "nav": "60.3907",
+       "balance": "4317.654",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jul-2019",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "82.302",
+       "nav": "60.7516",
+       "balance": "4399.956",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Aug-2019",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "82.728",
+       "nav": "60.4387",
+       "balance": "4482.684",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Sep-2019",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "79.724",
+       "nav": "62.7164",
+       "balance": "4562.408",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Oct-2019",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "80.445",
+       "nav": "62.1543",
+       "balance": "4642.853",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Nov-2019",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "77.464",
+       "nav": "64.5459",
+       "balance": "4720.317",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Dec-2019",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "80.069",
+       "nav": "62.4458",
+       "balance": "4800.386",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jan-2020",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "77.224",
+       "nav": "64.7470",
+       "balance": "4877.610",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Feb-2020",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "76.765",
+       "nav": "65.1339",
+       "balance": "4954.375",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Mar-2020",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "77.162",
+       "nav": "64.7985",
+       "balance": "5031.537",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Apr-2020",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "74.360",
+       "nav": "67.2404",
+       "balance": "5105.897",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-May-2020",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "75.032",
+       "nav": "66.6378",
+       "balance": "5180.929",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jun-2020",
+       "description": "Purchase - Systematic Investment",
+       "amount": "5000",
+       "units": "72.252",
+       "nav": "69.2020",
+       "balance": "5253.181",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jul-2020",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "74.678",
+       "nav": "66.9504",
+       "balance": "5327.859",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jul-2020",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Aug-2020",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "72.024",
+       "nav": "69.4175",
+       "balance": "5399.883",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Aug-2020",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Sep-2020",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "71.596",
+       "nav": "69.8324",
+       "balance": "5471.479",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Sep-2020",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Oct-2020",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "71.967",
+       "nav": "69.4728",
+       "balance": "5543.446",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Oct-2020",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Nov-2020",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "69.353",
+       "nav": "72.0909",
+       "balance": "5612.799",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Nov-2020",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Dec-2020",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "69.981",
+       "nav": "71.4447",
+       "balance": "5682.780",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Dec-2020",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Jan-2021",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "67.388",
+       "nav": "74.1939",
+       "balance": "5750.168",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jan-2021",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Feb-2021",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "69.654",
+       "nav": "71.7799",
+       "balance": "5819.822",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Feb-2021",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Mar-2021",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "67.178",
+       "nav": "74.4250",
+       "balance": "5887.000",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Mar-2021",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Apr-2021",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "66.779",
+       "nav": "74.8698",
+       "balance": "5953.779",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Apr-2021",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-May-2021",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "67.125",
+       "nav": "74.4842",
+       "balance": "6020.904",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-May-2021",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Jun-2021",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "64.687",
+       "nav": "77.2912",
+       "balance": "6085.591",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jun-2021",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Jul-2021",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "65.272",
+       "nav": "76.5984",
+       "balance": "6150.863",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jul-2021",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Aug-2021",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "62.854",
+       "nav": "79.5459",
+       "balance": "6213.717",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Aug-2021",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Sep-2021",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "64.968",
+       "nav": "76.9577",
+       "balance": "6278.685",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Sep-2021",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Oct-2021",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "62.658",
+       "nav": "79.7937",
+       "balance": "6341.343",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Oct-2021",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Nov-2021",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "62.286",
+       "nav": "80.2705",
+       "balance": "6403.629",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Nov-2021",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Dec-2021",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "62.609",
+       "nav": "79.8571",
+       "balance": "6466.238",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Dec-2021",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Jan-2022",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "60.335",
+       "nav": "82.8666",
+       "balance": "6526.573",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jan-2022",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Feb-2022",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "60.881",
+       "nav": "82.1239",
+       "balance": "6587.454",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Feb-2022",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Mar-2022",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "58.625",
+       "nav": "85.2840",
+       "balance": "6646.079",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Mar-2022",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Apr-2022",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "60.596",
+       "nav": "82.5091",
+       "balance": "6706.675",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Apr-2022",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-May-2022",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "58.443",
+       "nav": "85.5496",
+       "balance": "6765.118",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-May-2022",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Jun-2022",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "58.095",
+       "nav": "86.0609",
+       "balance": "6823.213",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jun-2022",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "15-Jun-2022",
+       "description": "Redemption",
+       "amount": "-150000",
+       "units": "-1742.952",
+       "nav": "86.0609",
+       "balance": "5080.261",
+       "type": "REDEMPTION"
+      },
+      {
+       "date": "05-Jul-2022",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "58.396",
+       "nav": "85.6177",
+       "balance": "5138.657",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jul-2022",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Aug-2022",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "56.275",
+       "nav": "88.8442",
+       "balance": "5194.932",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Aug-2022",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Sep-2022",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "56.784",
+       "nav": "88.0479",
+       "balance": "5251.716",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Sep-2022",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Oct-2022",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "54.680",
+       "nav": "91.4360",
+       "balance": "5306.396",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Oct-2022",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Nov-2022",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "56.519",
+       "nav": "88.4609",
+       "balance": "5362.915",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Nov-2022",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Dec-2022",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "54.511",
+       "nav": "91.7208",
+       "balance": "5417.426",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Dec-2022",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Jan-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "54.187",
+       "nav": "92.2689",
+       "balance": "5471.613",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jan-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Feb-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "54.467",
+       "nav": "91.7937",
+       "balance": "5526.080",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Feb-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Mar-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "52.489",
+       "nav": "95.2530",
+       "balance": "5578.569",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Mar-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Apr-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "52.964",
+       "nav": "94.3993",
+       "balance": "5631.533",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Apr-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-May-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "51.001",
+       "nav": "98.0317",
+       "balance": "5682.534",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-May-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Jun-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "52.717",
+       "nav": "94.8421",
+       "balance": "5735.251",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jun-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Jul-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "50.843",
+       "nav": "98.3371",
+       "balance": "5786.094",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jul-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Aug-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "50.541",
+       "nav": "98.9248",
+       "balance": "5836.635",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Aug-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Sep-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "50.803",
+       "nav": "98.4153",
+       "balance": "5887.438",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Sep-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Oct-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "48.958",
+       "nav": "102.1241",
+       "balance": "5936.396",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Oct-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Nov-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "49.400",
+       "nav": "101.2088",
+       "balance": "5985.796",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Nov-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Dec-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "47.570",
+       "nav": "105.1033",
+       "balance": "6033.366",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Dec-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Jan-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "49.170",
+       "nav": "101.6836",
+       "balance": "6082.536",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jan-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Feb-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "47.422",
+       "nav": "105.4307",
+       "balance": "6129.958",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Feb-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Mar-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "47.140",
+       "nav": "106.0607",
+       "balance": "6177.098",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Mar-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Apr-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "47.384",
+       "nav": "105.5145",
+       "balance": "6224.482",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Apr-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-May-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "45.664",
+       "nav": "109.4909",
+       "balance": "6270.146",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-May-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Jun-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "46.077",
+       "nav": "108.5096",
+       "balance": "6316.223",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jun-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Jul-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "44.369",
+       "nav": "112.6849",
+       "balance": "6360.592",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jul-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Aug-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "45.861",
+       "nav": "109.0185",
+       "balance": "6406.453",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Aug-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Sep-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "44.232",
+       "nav": "113.0359",
+       "balance": "6450.685",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Sep-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Oct-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "43.969",
+       "nav": "113.7115",
+       "balance": "6494.654",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Oct-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Nov-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "44.196",
+       "nav": "113.1258",
+       "balance": "6538.850",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Nov-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Dec-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "42.591",
+       "nav": "117.3890",
+       "balance": "6581.441",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Dec-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Jan-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "42.976",
+       "nav": "116.3369",
+       "balance": "6624.417",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jan-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Feb-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "41.384",
+       "nav": "120.8135",
+       "balance": "6665.801",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Feb-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Mar-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "42.776",
+       "nav": "116.8826",
+       "balance": "6708.577",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Mar-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Apr-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "41.256",
+       "nav": "121.1898",
+       "balance": "6749.833",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Apr-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-May-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "41.010",
+       "nav": "121.9141",
+       "balance": "6790.843",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-May-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Jun-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "41.223",
+       "nav": "121.2862",
+       "balance": "6832.066",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jun-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Jul-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "39.726",
+       "nav": "125.8569",
+       "balance": "6871.792",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jul-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Aug-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "40.085",
+       "nav": "124.7289",
+       "balance": "6911.877",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Aug-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Sep-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "38.600",
+       "nav": "129.5284",
+       "balance": "6950.477",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Sep-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Oct-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "39.898",
+       "nav": "125.3140",
+       "balance": "6990.375",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Oct-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Nov-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "38.480",
+       "nav": "129.9319",
+       "balance": "7028.855",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Nov-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Dec-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "38.251",
+       "nav": "130.7084",
+       "balance": "7067.106",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Dec-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Jan-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "38.449",
+       "nav": "130.0352",
+       "balance": "7105.555",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jan-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Feb-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "37.053",
+       "nav": "134.9357",
+       "balance": "7142.608",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Feb-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Mar-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "37.388",
+       "nav": "133.7263",
+       "balance": "7179.996",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Mar-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Apr-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "36.003",
+       "nav": "138.8720",
+       "balance": "7215.999",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Apr-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-May-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "37.213",
+       "nav": "134.3536",
+       "balance": "7253.212",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-May-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Jun-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "35.891",
+       "nav": "139.3046",
+       "balance": "7289.103",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jun-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Jul-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "35.678",
+       "nav": "140.1371",
+       "balance": "7324.781",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Jul-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Aug-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "35.862",
+       "nav": "139.4154",
+       "balance": "7360.643",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Aug-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Sep-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "34.560",
+       "nav": "144.6693",
+       "balance": "7395.203",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Sep-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Oct-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "34.872",
+       "nav": "143.3727",
+       "balance": "7430.075",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Oct-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "05-Nov-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "4999.75",
+       "units": "33.580",
+       "nav": "148.8896",
+       "balance": "7463.655",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "05-Nov-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.25",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "folio": "DEMO10002/01",
+   "amc": "Sample Mutual Fund",
+   "name": "Demo Investor",
+   "PAN": "AAAPZ0000Z",
+   "KYC": "OK",
+   "PANKYC": "OK",
+   "schemes": [
+    {
+     "scheme": "Sample ELSS Tax Saver Fund - Regular Plan - Growth",
+     "advisor": "ARN-000001",
+     "rta_code": "900002",
+     "rta": "CAMS",
+     "type": "EQUITY",
+     "isin": "INF000S01029",
+     "amfi": "900002",
+     "nominees": [
+      "Demo Nominee"
+     ],
+     "open": "0.000",
+     "close": "1109.070",
+     "close_calculated": "1109.070",
+     "valuation": {
+      "date": "20-Nov-2026",
+      "nav": "98.2395",
+      "value": "108954.48",
+      "cost": "84000.00"
+     },
+     "transactions": [
+      {
+       "date": "10-Jun-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "33.332",
+       "nav": "60.0000",
+       "balance": "33.332",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Jun-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Jul-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "33.438",
+       "nav": "59.8092",
+       "balance": "66.770",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Jul-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Aug-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "32.160",
+       "nav": "62.1860",
+       "balance": "98.930",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Aug-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Sep-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "32.387",
+       "nav": "61.7507",
+       "balance": "131.317",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Sep-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Oct-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "31.125",
+       "nav": "64.2538",
+       "balance": "162.442",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Oct-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Nov-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "32.108",
+       "nav": "62.2863",
+       "balance": "194.550",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Nov-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Dec-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "30.906",
+       "nav": "64.7095",
+       "balance": "225.456",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Dec-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Jan-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "30.662",
+       "nav": "65.2251",
+       "balance": "256.118",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Jan-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Feb-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "30.759",
+       "nav": "65.0177",
+       "balance": "286.877",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Feb-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Mar-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "29.584",
+       "nav": "67.6015",
+       "balance": "316.461",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Mar-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Apr-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "29.792",
+       "nav": "67.1283",
+       "balance": "346.253",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Apr-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-May-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "28.632",
+       "nav": "69.8494",
+       "balance": "374.885",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-May-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Jun-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "29.536",
+       "nav": "67.7105",
+       "balance": "404.421",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Jun-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Jul-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "28.430",
+       "nav": "70.3447",
+       "balance": "432.851",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Jul-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Aug-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "28.205",
+       "nav": "70.9053",
+       "balance": "461.056",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Aug-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Sep-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "28.295",
+       "nav": "70.6798",
+       "balance": "489.351",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Sep-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Oct-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "27.214",
+       "nav": "73.4886",
+       "balance": "516.565",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Oct-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Nov-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "27.406",
+       "nav": "72.9742",
+       "balance": "543.971",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Nov-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Dec-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "26.338",
+       "nav": "75.9322",
+       "balance": "570.309",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Dec-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Jan-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "27.170",
+       "nav": "73.6071",
+       "balance": "597.479",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Jan-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Feb-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "26.153",
+       "nav": "76.4707",
+       "balance": "623.632",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Feb-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Mar-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "25.946",
+       "nav": "77.0801",
+       "balance": "649.578",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Mar-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Apr-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "26.029",
+       "nav": "76.8349",
+       "balance": "675.607",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Apr-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-May-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "25.034",
+       "nav": "79.8884",
+       "balance": "700.641",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-May-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Jun-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "25.210",
+       "nav": "79.3291",
+       "balance": "725.851",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Jun-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Jul-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "24.228",
+       "nav": "82.5448",
+       "balance": "750.079",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Jul-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Aug-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "24.993",
+       "nav": "80.0172",
+       "balance": "775.072",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Aug-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Sep-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "24.057",
+       "nav": "83.1302",
+       "balance": "799.129",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Sep-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Oct-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "23.867",
+       "nav": "83.7926",
+       "balance": "822.996",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Oct-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Nov-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "23.943",
+       "nav": "83.5261",
+       "balance": "846.939",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Nov-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Dec-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "23.028",
+       "nav": "86.8455",
+       "balance": "869.967",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Dec-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Jan-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "23.191",
+       "nav": "86.2375",
+       "balance": "893.158",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Jan-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Feb-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "22.287",
+       "nav": "89.7332",
+       "balance": "915.445",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Feb-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Mar-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "22.991",
+       "nav": "86.9855",
+       "balance": "938.436",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Mar-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Apr-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "22.130",
+       "nav": "90.3696",
+       "balance": "960.566",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Apr-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-May-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "21.955",
+       "nav": "91.0897",
+       "balance": "982.521",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-May-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Jun-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "22.025",
+       "nav": "90.8000",
+       "balance": "1004.546",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Jun-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Jul-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "21.183",
+       "nav": "94.4084",
+       "balance": "1025.729",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Jul-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Aug-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "21.333",
+       "nav": "93.7476",
+       "balance": "1047.062",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Aug-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Sep-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "20.502",
+       "nav": "97.5477",
+       "balance": "1067.564",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Sep-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Oct-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "21.149",
+       "nav": "94.5607",
+       "balance": "1088.713",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Oct-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "10-Nov-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "1999.90",
+       "units": "20.357",
+       "nav": "98.2395",
+       "balance": "1109.070",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "10-Nov-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.10",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "folio": "DEMO20001/02",
+   "amc": "Sample Debt Mutual Fund",
+   "name": "Demo Investor",
+   "PAN": "AAAPZ0000Z",
+   "KYC": "OK",
+   "PANKYC": "OK",
+   "schemes": [
+    {
+     "scheme": "Sample Corporate Bond Fund - Regular Plan - Growth",
+     "advisor": "ARN-000001",
+     "rta_code": "900003",
+     "rta": "CAMS",
+     "type": "DEBT",
+     "isin": "INF000D01017",
+     "amfi": "900003",
+     "nominees": [
+      "Demo Nominee"
+     ],
+     "open": "0.000",
+     "close": "11352.302",
+     "close_calculated": "11352.302",
+     "valuation": {
+      "date": "20-Nov-2026",
+      "nav": "35.3192",
+      "value": "400954.22",
+      "cost": "300000.00"
+     },
+     "transactions": [
+      {
+       "date": "10-Aug-2021",
+       "description": "Purchase",
+       "amount": "199990.00",
+       "units": "7999.600",
+       "nav": "25.0000",
+       "balance": "7999.600",
+       "type": "PURCHASE"
+      },
+      {
+       "date": "10-Aug-2021",
+       "description": "*** Stamp Duty ***",
+       "amount": "10.00",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "15-Feb-2024",
+       "description": "Purchase",
+       "amount": "99995.00",
+       "units": "3352.702",
+       "nav": "29.8252",
+       "balance": "11352.302",
+       "type": "PURCHASE"
+      },
+      {
+       "date": "15-Feb-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "5.00",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "folio": "DEMO10003/01",
+   "amc": "Sample Mutual Fund",
+   "name": "Demo Investor",
+   "PAN": "AAAPZ0000Z",
+   "KYC": "OK",
+   "PANKYC": "OK",
+   "schemes": [
+    {
+     "scheme": "Sample Balanced Advantage Fund - Regular Plan - Growth",
+     "advisor": "ARN-000001",
+     "rta_code": "900004",
+     "rta": "CAMS",
+     "type": "EQUITY",
+     "isin": "INF000S01037",
+     "amfi": "900004",
+     "nominees": [
+      "Demo Nominee"
+     ],
+     "open": "0.000",
+     "close": "4999.750",
+     "close_calculated": "4999.750",
+     "valuation": {
+      "date": "20-Nov-2026",
+      "nav": "31.4950",
+      "value": "157467.13",
+      "cost": "150000.00"
+     },
+     "transactions": [
+      {
+       "date": "10-Mar-2026",
+       "description": "Purchase",
+       "amount": "149992.50",
+       "units": "4999.750",
+       "nav": "30.0000",
+       "balance": "4999.750",
+       "type": "PURCHASE"
+      },
+      {
+       "date": "10-Mar-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "7.50",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "folio": "DEMO30001/01",
+   "amc": "Sample Index Mutual Fund",
+   "name": "Demo Investor",
+   "PAN": "AAAPZ0000Z",
+   "KYC": "OK",
+   "PANKYC": "OK",
+   "schemes": [
+    {
+     "scheme": "Sample Nifty 50 Index Fund - Direct Plan - Growth",
+     "advisor": "INA000000001",
+     "rta_code": "900005",
+     "rta": "CAMS",
+     "type": "EQUITY",
+     "isin": "INF000I01015",
+     "amfi": "900005",
+     "nominees": [
+      "Demo Nominee"
+     ],
+     "open": "0.000",
+     "close": "9216.822",
+     "close_calculated": "9216.822",
+     "valuation": {
+      "date": "20-Nov-2026",
+      "nav": "25.5246",
+      "value": "235255.69",
+      "cost": "177000.00"
+     },
+     "transactions": [
+      {
+       "date": "07-Jan-2022",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "199.990",
+       "nav": "15.0000",
+       "balance": "199.990",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Jan-2022",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Feb-2022",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "201.224",
+       "nav": "14.9080",
+       "balance": "401.214",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Feb-2022",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Mar-2022",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "194.109",
+       "nav": "15.4545",
+       "balance": "595.323",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Mar-2022",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Apr-2022",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "196.058",
+       "nav": "15.3008",
+       "balance": "791.381",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Apr-2022",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-May-2022",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "188.981",
+       "nav": "15.8738",
+       "balance": "980.362",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-May-2022",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Jun-2022",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "195.531",
+       "nav": "15.3421",
+       "balance": "1175.893",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Jun-2022",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Jul-2022",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "188.767",
+       "nav": "15.8918",
+       "balance": "1364.660",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Jul-2022",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Aug-2022",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "187.832",
+       "nav": "15.9709",
+       "balance": "1552.492",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Aug-2022",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Sep-2022",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "188.992",
+       "nav": "15.8729",
+       "balance": "1741.484",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Sep-2022",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Oct-2022",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "182.309",
+       "nav": "16.4548",
+       "balance": "1923.793",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Oct-2022",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Nov-2022",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "184.139",
+       "nav": "16.2912",
+       "balance": "2107.932",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Nov-2022",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Dec-2022",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "177.492",
+       "nav": "16.9013",
+       "balance": "2285.424",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Dec-2022",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Jan-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "183.643",
+       "nav": "16.3352",
+       "balance": "2469.067",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Jan-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Feb-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "177.292",
+       "nav": "16.9204",
+       "balance": "2646.359",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Feb-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Mar-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "176.414",
+       "nav": "17.0046",
+       "balance": "2822.773",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Mar-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Apr-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "177.503",
+       "nav": "16.9003",
+       "balance": "3000.276",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Apr-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-May-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "171.225",
+       "nav": "17.5199",
+       "balance": "3171.501",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-May-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Jun-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "172.946",
+       "nav": "17.3456",
+       "balance": "3344.447",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Jun-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Jul-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "166.702",
+       "nav": "17.9953",
+       "balance": "3511.149",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Jul-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Aug-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "172.480",
+       "nav": "17.3925",
+       "balance": "3683.629",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Aug-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Sep-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "166.514",
+       "nav": "18.0156",
+       "balance": "3850.143",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Sep-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Oct-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "165.689",
+       "nav": "18.1053",
+       "balance": "4015.832",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Oct-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Nov-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "166.712",
+       "nav": "17.9942",
+       "balance": "4182.544",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Nov-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Dec-2023",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "160.816",
+       "nav": "18.6539",
+       "balance": "4343.360",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Dec-2023",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Jan-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "162.432",
+       "nav": "18.4684",
+       "balance": "4505.792",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Jan-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Feb-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "156.568",
+       "nav": "19.1600",
+       "balance": "4662.360",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Feb-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Mar-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "161.994",
+       "nav": "18.5183",
+       "balance": "4824.354",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Mar-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Apr-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "156.391",
+       "nav": "19.1817",
+       "balance": "4980.745",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Apr-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-May-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "155.616",
+       "nav": "19.2772",
+       "balance": "5136.361",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-May-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Jun-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "156.577",
+       "nav": "19.1589",
+       "balance": "5292.938",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Jun-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Jul-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "151.040",
+       "nav": "19.8613",
+       "balance": "5443.978",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Jul-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Aug-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "152.557",
+       "nav": "19.6638",
+       "balance": "5596.535",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Aug-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Sep-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "147.050",
+       "nav": "20.4002",
+       "balance": "5743.585",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Sep-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Oct-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "152.146",
+       "nav": "19.7169",
+       "balance": "5895.731",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Oct-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Nov-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "146.884",
+       "nav": "20.4232",
+       "balance": "6042.615",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Nov-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Dec-2024",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "146.157",
+       "nav": "20.5249",
+       "balance": "6188.772",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Dec-2024",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Jan-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "147.059",
+       "nav": "20.3990",
+       "balance": "6335.831",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Jan-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Feb-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "141.858",
+       "nav": "21.1468",
+       "balance": "6477.689",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Feb-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Mar-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "143.283",
+       "nav": "20.9365",
+       "balance": "6620.972",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Mar-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Apr-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "138.111",
+       "nav": "21.7206",
+       "balance": "6759.083",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Apr-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-May-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "142.897",
+       "nav": "20.9931",
+       "balance": "6901.980",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-May-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Jun-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "137.955",
+       "nav": "21.7452",
+       "balance": "7039.935",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Jun-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Jul-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "137.271",
+       "nav": "21.8535",
+       "balance": "7177.206",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Jul-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Aug-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "138.118",
+       "nav": "21.7194",
+       "balance": "7315.324",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Aug-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Sep-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "133.234",
+       "nav": "22.5156",
+       "balance": "7448.558",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Sep-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Oct-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "134.573",
+       "nav": "22.2917",
+       "balance": "7583.131",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Oct-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Nov-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "129.715",
+       "nav": "23.1265",
+       "balance": "7712.846",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Nov-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Dec-2025",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "134.210",
+       "nav": "22.3519",
+       "balance": "7847.056",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Dec-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Jan-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "129.568",
+       "nav": "23.1527",
+       "balance": "7976.624",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Jan-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Feb-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "128.926",
+       "nav": "23.2680",
+       "balance": "8105.550",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Feb-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Mar-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "129.722",
+       "nav": "23.1252",
+       "balance": "8235.272",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Mar-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Apr-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "125.135",
+       "nav": "23.9729",
+       "balance": "8360.407",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Apr-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-May-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "126.391",
+       "nav": "23.7346",
+       "balance": "8486.798",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-May-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Jun-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "121.829",
+       "nav": "24.6234",
+       "balance": "8608.627",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Jun-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Jul-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "126.051",
+       "nav": "23.7987",
+       "balance": "8734.678",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Jul-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Aug-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "121.691",
+       "nav": "24.6513",
+       "balance": "8856.369",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Aug-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Sep-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "121.089",
+       "nav": "24.7740",
+       "balance": "8977.458",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Sep-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Oct-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "121.836",
+       "nav": "24.6220",
+       "balance": "9099.294",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Oct-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      },
+      {
+       "date": "07-Nov-2026",
+       "description": "Purchase - Systematic Investment",
+       "amount": "2999.85",
+       "units": "117.528",
+       "nav": "25.5246",
+       "balance": "9216.822",
+       "type": "PURCHASE_SIP"
+      },
+      {
+       "date": "07-Nov-2026",
+       "description": "*** Stamp Duty ***",
+       "amount": "0.15",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "folio": "DEMO10004/01",
+   "amc": "Sample Mutual Fund",
+   "name": "Demo Investor",
+   "PAN": "AAAPZ0000Z",
+   "KYC": "OK",
+   "PANKYC": "OK",
+   "schemes": [
+    {
+     "scheme": "Sample Small Cap Fund - Regular Plan - Growth",
+     "advisor": "ARN-000001",
+     "rta_code": "900006",
+     "rta": "CAMS",
+     "type": "EQUITY",
+     "isin": "INF000S01045",
+     "amfi": "900006",
+     "nominees": [
+      "Demo Nominee"
+     ],
+     "open": "0.000",
+     "close": "1249.938",
+     "close_calculated": "1249.938",
+     "valuation": {
+      "date": "20-Nov-2026",
+      "nav": "96.2149",
+      "value": "120262.66",
+      "cost": "100000.00"
+     },
+     "transactions": [
+      {
+       "date": "15-Dec-2025",
+       "description": "Purchase",
+       "amount": "99995.00",
+       "units": "1249.938",
+       "nav": "80.0000",
+       "balance": "1249.938",
+       "type": "PURCHASE"
+      },
+      {
+       "date": "15-Dec-2025",
+       "description": "*** Stamp Duty ***",
+       "amount": "5.00",
+       "units": null,
+       "nav": null,
+       "balance": null,
+       "type": "STAMP_DUTY_TAX"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "investor_info": {
+  "name": "Demo Investor",
+  "email": "demo@example.com",
+  "address": "1 Sample Street, Demo City 000000",
+  "mobile": "+91 90000 00000"
+ },
+ "cas_type": "DETAILED",
+ "file_type": "CAMS",
+ "parse_warnings": []
+}
