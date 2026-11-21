@@ -63,8 +63,8 @@ explicit_package_bases = true
 plugins = ["pydantic.mypy"]
 
 [[tool.mypy.overrides]]
-# casparser ships no type information (no py.typed).
-module = ["casparser", "casparser.*"]
+# casparser and pypdfium2 ship no type information (no py.typed).
+module = ["casparser", "casparser.*", "pypdfium2", "pypdfium2.*"]
 ignore_missing_imports = true
 
 [tool.pydantic-mypy]
