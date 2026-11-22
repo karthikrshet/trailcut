@@ -1,4 +1,4 @@
-import type { ApiErrorBody, AssumptionsUpdate, SessionResponse } from './types';
+import type { ApiErrorBody, AssumptionsUpdate, ChatResponse, ChatTurn, SessionResponse } from './types';
 
 const BASE = (import.meta.env.VITE_API_URL as string | undefined) ?? '/api';
 
@@ -59,6 +59,12 @@ export function createClient(fetchImpl: Fetch = (input, init) => fetch(input, in
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(update),
+      }),
+    chat: (id: string, message: string, history: ChatTurn[]) =>
+      request<ChatResponse>(`/v1/sessions/${encodeURIComponent(id)}/chat`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message, history }),
       }),
     remove: (id: string) =>
       request<undefined>(`/v1/sessions/${encodeURIComponent(id)}`, { method: 'DELETE' }),

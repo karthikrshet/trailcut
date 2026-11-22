@@ -1,7 +1,8 @@
-import { Box, Text } from '@razorpay/blade/components';
-import { useMemo } from 'react';
+import { Box, Button, Text } from '@razorpay/blade/components';
+import { useMemo, useState } from 'react';
 
 import { createClient, type Client } from './api/client';
+import { ChatDrawer } from './components/ChatDrawer';
 import { ProcessingSteps } from './components/ProcessingSteps';
 import { ErrorBlock } from './components/StateViews';
 import { useSession } from './state/useSession';
@@ -21,6 +22,7 @@ const ERROR_TITLES: Record<string, string> = {
 export function App({ client }: { client?: Client }) {
   const api = useMemo(() => client ?? createClient(), [client]);
   const { state, startSample, upload, update, deleteData, reset } = useSession(api);
+  const [chatOpen, setChatOpen] = useState(false);
 
   return (
     <Box minHeight="100vh" backgroundColor="surface.background.gray.subtle">
@@ -59,7 +61,29 @@ export function App({ client }: { client?: Client }) {
             busy={state.updating}
             updateError={state.updateError}
             onUpdate={(u) => void update(u)}
-            onDelete={() => void deleteData()}
+            onDelete={() => {
+              setChatOpen(false);
+              void deleteData();
+            }}
+            chat={
+              <Button
+                variant="primary"
+                onClick={() => {
+                  setChatOpen(true);
+                }}
+              >
+                Ask about my plan
+              </Button>
+            }
+          />
+        ) : null}
+        {state.status === 'ready' ? (
+          <ChatDrawer
+            isOpen={chatOpen}
+            onClose={() => {
+              setChatOpen(false);
+            }}
+            ask={(message, history) => api.chat(state.data.session_id, message, history)}
           />
         ) : null}
       </Box>

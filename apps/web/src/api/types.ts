@@ -156,4 +156,18 @@ export type AssumptionsUpdate = Partial<{
   ter_overrides: Record<string, { regular_percent: Decimal; direct_percent: Decimal }>;
 }>;
 
+export type ChatTurn = { role: 'user' | 'assistant'; content: string };
+
+export type ChatResponse = {
+  answer: string;
+  agent: string;
+  mode: 'llm' | 'offline' | 'fallback' | 'rule';
+  refused: boolean;
+  notice: string | null;
+  tools_used: string[];
+  trace: { kind: string; name: string; ms: number; detail: string }[];
+  turns_left: number;
+  disclaimer: string;
+};
+
 export type ApiErrorBody = { error: { code: string; message: string } };

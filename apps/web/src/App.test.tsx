@@ -13,6 +13,7 @@ function fakeClient(overrides: Partial<Client> = {}): Client {
     get: vi.fn().mockResolvedValue(sampleSession()),
     updateAssumptions: vi.fn().mockResolvedValue(sampleSession()),
     remove: vi.fn().mockResolvedValue(undefined),
+    chat: vi.fn().mockResolvedValue({ answer: 'ok', agent: 'a', mode: 'offline', refused: false, notice: null, tools_used: [], trace: [], turns_left: 29, disclaimer: 'd' }),
     ...overrides,
   };
 }
