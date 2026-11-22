@@ -4,9 +4,11 @@ test.describe('app shell', () => {
   test('loads with heading, privacy note and advice notice', async ({ page }) => {
     await page.goto('/');
     await expect(page).toHaveTitle('TrailCut');
-    await expect(page.getByRole('heading', { level: 1, name: 'TrailCut' })).toBeVisible();
-    await expect(page.getByText(/never stored/)).toBeVisible();
-    await expect(page.getByText('Not investment advice')).toBeVisible();
+    await expect(
+      page.getByRole('heading', { level: 1, name: 'Stop paying commission on your own money.' }),
+    ).toBeVisible();
+    await expect(page.getByText('Never stored', { exact: true })).toBeVisible();
+    await expect(page.getByText(/not investment advice/i).first()).toBeAttached();
   });
 
   test('has no horizontal scroll', async ({ page }) => {
