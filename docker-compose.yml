@@ -1,0 +1,13 @@
+# Local production-like run of the API: docker compose up --build
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      TRAILCUT_ALLOWED_ORIGINS: "http://localhost:5173"
+      # ANTHROPIC_API_KEY: set in your shell or an .env file (never commit it)
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+    read_only: true
+    tmpfs:
+      - /tmp

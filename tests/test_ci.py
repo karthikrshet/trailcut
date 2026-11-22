@@ -31,11 +31,12 @@ def test_engine_coverage_gate_is_at_least_90() -> None:
 def test_ci_stages_run_in_order() -> None:
     jobs = load_ci()["jobs"]
     assert isinstance(jobs, dict)
-    assert list(jobs) == ["lint-types", "unit-property", "api-web", "e2e"]
+    assert list(jobs) == ["lint-types", "unit-property", "api-web", "e2e", "docker"]
     assert "needs" not in jobs["lint-types"]
     assert jobs["unit-property"]["needs"] == "lint-types"
     assert jobs["api-web"]["needs"] == "unit-property"
     assert jobs["e2e"]["needs"] == "api-web"
+    assert jobs["docker"]["needs"] == "api-web"
 
 
 def test_ci_runs_the_same_tasks_as_make() -> None:
@@ -57,3 +58,13 @@ def test_dev_script_exposes_make_targets() -> None:
     for target in ("check", "test", "e2e", "evals", "dev"):
         assert target in tasks
         assert f"\n{target}:" in makefile
+
+
+def test_docker_image_runs_as_non_root_with_healthcheck() -> None:
+    dockerfile = (ROOT / "Dockerfile").read_text(encoding="utf-8")
+    assert "USER trailcut" in dockerfile
+    assert "HEALTHCHECK" in dockerfile
+    assert "--no-access-log" in dockerfile
+    ignore = (ROOT / ".dockerignore").read_text(encoding="utf-8")
+    assert "*.pdf" in ignore
+    assert ".env*" in ignore
