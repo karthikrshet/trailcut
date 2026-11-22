@@ -129,7 +129,9 @@ _ORDERS = re.compile(
     re.IGNORECASE,
 )
 _SHOULD = re.compile(
-    r"\b(should\s+i|is\s+it\s+(wise|worth|good)|do\s+you\s+recommend)\b", re.IGNORECASE
+    # "Why should I wait?" asks for a reason, not a recommendation.
+    r"(?<!why\s)\b(should\s+i|is\s+it\s+(wise|worth|good)|do\s+you\s+recommend)\b",
+    re.IGNORECASE,
 )
 _LOT_ID = re.compile(r"\bF\d+-S\d+-L\d{3,}\b")
 _ROUTES: tuple[tuple[re.Pattern[str], Specialist], ...] = (

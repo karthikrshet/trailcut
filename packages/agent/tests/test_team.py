@@ -143,6 +143,11 @@ def test_order_placement_is_refused(ctx: ToolContext, question: str) -> None:
     assert (a.answer, a.refused) == (ORDER_REFUSAL, True)
 
 
+def test_why_should_i_questions_do_not_get_the_notice(ctx: ToolContext) -> None:
+    a = AgentTeam(None).answer("Why should I wait on some lots?", ctx)
+    assert a.notice is None
+
+
 def test_should_i_questions_get_the_notice(ctx: ToolContext) -> None:
     a = AgentTeam(None).answer("Should I switch my flexi cap now?", ctx)
     assert a.notice == NOT_ADVICE
