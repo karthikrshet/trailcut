@@ -9,9 +9,9 @@
 | ``TRAILCUT_DATA_DIR`` | repo ``data/`` | Tax rules, exit-load defaults, market data |
 | ``TRAILCUT_CACHE_DIR`` | ``.cache/market`` | Cached public market files (never user data) |
 | ``TRAILCUT_ONLINE`` | ``0`` | ``1`` to refresh AMFI NAV data from the internet |
-| ``ANTHROPIC_API_KEY`` | unset | Enables the chat agents |
-| ``TRAILCUT_MODEL`` | ``claude-sonnet-5-5`` | Model for explanations |
-| ``TRAILCUT_ROUTER_MODEL`` | ``claude-haiku-5-5`` | Model for routing and the guard |
+| ``ANTHROPIC_API_KEY`` | unset | Enables written chat answers (offline answers otherwise) |
+| ``TRAILCUT_MODEL`` | ``claude-opus-5-5`` | Claude model for chat answers |
+| ``TRAILCUT_MAX_CHAT_TURNS`` | ``30`` | Chat questions per session |
 """
 
 from __future__ import annotations
@@ -40,8 +40,8 @@ class Settings:
     cache_dir: Path = REPO_ROOT / ".cache" / "market"
     online: bool = False
     anthropic_api_key: SecretStr | None = None
-    model: str = "claude-sonnet-5-5"
-    router_model: str = "claude-haiku-5-5"
+    model: str = "claude-opus-5-5"
+    max_chat_turns: int = 30
     extra: dict[str, str] = field(default_factory=dict)
 
     @classmethod
@@ -63,5 +63,5 @@ class Settings:
             online=_flag(e.get("TRAILCUT_ONLINE")),
             anthropic_api_key=SecretStr(key) if key else None,
             model=e.get("TRAILCUT_MODEL", base.model),
-            router_model=e.get("TRAILCUT_ROUTER_MODEL", base.router_model),
+            max_chat_turns=int(e.get("TRAILCUT_MAX_CHAT_TURNS", base.max_chat_turns)),
         )

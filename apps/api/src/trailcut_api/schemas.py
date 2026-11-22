@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from decimal import Decimal
-from typing import Annotated
+from typing import Annotated, Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -67,10 +67,44 @@ class AssumptionsUpdate(BaseModel):
     ter_overrides: dict[str, TerOverride] | None = None
 
 
+class ChatTurn(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    role: Literal["user", "assistant"]
+    content: Annotated[str, Field(min_length=1, max_length=2000)]
+
+
+class ChatRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    message: Annotated[str, Field(min_length=1, max_length=1000)]
+    history: Annotated[list[ChatTurn], Field(max_length=12)] = Field(default_factory=list)
+
+
+class TraceStepOut(BaseModel):
+    kind: str
+    name: str
+    ms: int
+    detail: str
+
+
+class ChatResponse(BaseModel):
+    answer: str
+    agent: str
+    mode: str
+    refused: bool
+    notice: str | None
+    tools_used: list[str]
+    trace: list[TraceStepOut]
+    turns_left: int
+    disclaimer: str = DISCLAIMER
+
+
 class Meta(BaseModel):
     disclaimer: str
     tax_years: tuple[str, ...]
     max_upload_mb: int
     session_ttl_seconds: int
     chat_enabled: bool
+    chat_mode: Literal["llm", "offline"]
     data_sources: tuple[str, ...]

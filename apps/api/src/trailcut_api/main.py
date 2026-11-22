@@ -21,15 +21,21 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, ConfigDict, SecretStr
 
+from trailcut_agent.llm import ClaudeLLM
+from trailcut_agent.team import AgentTeam
+from trailcut_agent.tools import ToolContext
 from trailcut_api import __version__
 from trailcut_api.market.service import MarketService
 from trailcut_api.ratelimit import RateLimiter
 from trailcut_api.schemas import (
     DISCLAIMER,
     AssumptionsUpdate,
+    ChatRequest,
+    ChatResponse,
     ErrorResponse,
     Meta,
     SessionResponse,
+    TraceStepOut,
 )
 from trailcut_api.sessions import Session, SessionNotFoundError, SessionStore
 from trailcut_api.settings import Settings
@@ -86,6 +92,16 @@ class AppContext:
     market: MarketService
     rules: list[TaxRules]
     today: Callable[[], date]
+    team: AgentTeam
+
+
+def default_team(settings: Settings) -> AgentTeam:
+    """Agents write answers with Claude when a key is configured, else answer from tools."""
+    if settings.anthropic_api_key is None:
+        return AgentTeam(llm=None)
+    return AgentTeam(
+        llm=ClaudeLLM(api_key=settings.anthropic_api_key.get_secret_value(), model=settings.model)
+    )
 
 
 def _error(
@@ -101,6 +117,7 @@ def create_app(  # noqa: PLR0915 - route table
     clock: Callable[[], float] = time.monotonic,
     today: Callable[[], date] = date.today,
     market: MarketService | None = None,
+    team: AgentTeam | None = None,
 ) -> FastAPI:
     """Build the TrailCut API.
 
@@ -118,6 +135,7 @@ def create_app(  # noqa: PLR0915 - route table
         market=market or MarketService(s.data_dir, s.cache_dir, online=s.online),
         rules=load_rules(s.data_dir),
         today=today,
+        team=team or default_team(s),
     )
     app = FastAPI(
         title="TrailCut API",
@@ -212,7 +230,8 @@ def create_app(  # noqa: PLR0915 - route table
             tax_years=tuple(r.financial_year for r in ctx.rules),
             max_upload_mb=MAX_PDF_BYTES // (1024 * 1024),
             session_ttl_seconds=ctx.settings.session_ttl_seconds,
-            chat_enabled=ctx.settings.anthropic_api_key is not None,
+            chat_enabled=True,
+            chat_mode="llm" if ctx.team.llm is not None else "offline",
             data_sources=("AMFI (NAV, TER)", "casparser (CAS parsing, MIT)", "data/tax_rules"),
         )
 
@@ -294,6 +313,35 @@ def create_app(  # noqa: PLR0915 - route table
             )
         session = ctx.sessions.update(replace(session, assumptions=assumptions, market=market))
         return respond(session)
+
+    @app.post(
+        "/v1/sessions/{session_id}/chat",
+        tags=["chat"],
+        responses={404: {"model": ErrorResponse}, 429: {"model": ErrorResponse}},
+    )
+    def chat(session_id: str, body: ChatRequest, request: Request) -> ChatResponse:
+        rate_limit(request)
+        session = ctx.sessions.get(session_id)
+        if session.chat_turns >= ctx.settings.max_chat_turns:
+            raise ApiError(
+                429, "chat_limit", "This session has reached its chat limit. Start a new one."
+            )
+        session = ctx.sessions.update(replace(session, chat_turns=session.chat_turns + 1))
+        tool_ctx = ToolContext(session.portfolio, session.market, ctx.rules, session.assumptions)
+        result = ctx.team.answer(body.message, tool_ctx, [t.model_dump() for t in body.history])
+        return ChatResponse(
+            answer=result.answer,
+            agent=result.agent,
+            mode=result.mode,
+            refused=result.refused,
+            notice=result.notice,
+            tools_used=result.tools_used,
+            trace=[
+                TraceStepOut(kind=t.kind, name=t.name, ms=t.ms, detail=t.detail)
+                for t in result.trace
+            ],
+            turns_left=ctx.settings.max_chat_turns - session.chat_turns,
+        )
 
     @app.delete("/v1/sessions/{session_id}", tags=["sessions"], status_code=204)
     def delete_session(session_id: str) -> Response:

@@ -74,7 +74,8 @@ def test_meta(client: TestClient) -> None:
     body = client.get("/v1/meta").json()
     assert body["tax_years"] == ["2026-27"]
     assert body["max_upload_mb"] == 10
-    assert body["chat_enabled"] is False
+    # Chat works without a key: answers come straight from the engine.
+    assert (body["chat_enabled"], body["chat_mode"]) == (True, "offline")
     assert "not investment advice" in body["disclaimer"]
 
 
