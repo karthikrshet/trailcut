@@ -1,0 +1,17 @@
+# Default exit-load assumptions by fund type, used when a scheme's own schedule
+# isn't known. These are assumptions, not rules: the UI shows them and the user
+# can edit them per fund. Rates are fractions (0.01 = 1%), windows in days since
+# allotment ("within 365 days" = 365 days or fewer).
+#
+# Source note: most Indian equity and equity-oriented hybrid funds charge 1% on
+# units redeemed within a year (scheme information documents); ELSS has a lock-in
+# instead of an exit load; many debt funds charge none.
+
+equity:
+  - {within_days: 365, rate: "0.01"}
+elss: []
+hybrid:
+  - {within_days: 365, rate: "0.01"}
+debt: []
+unknown:
+  - {within_days: 365, rate: "0.01"}
