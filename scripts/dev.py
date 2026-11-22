@@ -29,6 +29,7 @@ PY_TYPED_PATHS = [
     "apps/api/tests",
     "tests",
     "scripts",
+    "evals",
 ]
 
 

@@ -41,3 +41,6 @@ Thumbs.db
 
 # Claude local settings
 .claude/settings.local.json
+
+# Eval run outputs
+evals/results/

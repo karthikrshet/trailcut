@@ -1,0 +1,18 @@
+# The orchestrator must hand each question to the right specialist.
+- {id: route-leak-1, question: "How much am I losing to commission?", expect: {agent: portfolio_analyst}}
+- {id: route-leak-2, question: "What do I lose by staying in Regular?", expect: {agent: portfolio_analyst}}
+- {id: route-xirr, question: "What's my XIRR?", expect: {agent: portfolio_analyst}}
+- {id: route-value, question: "How is my portfolio doing overall?", expect: {agent: portfolio_analyst}}
+- {id: route-plan-1, question: "Which lots should I switch now?", expect: {agent: switch_planner}}
+- {id: route-plan-2, question: "Why should I wait on the small cap fund?", expect: {agent: switch_planner}}
+- {id: route-plan-3, question: "How much tax will the switch cost?", expect: {agent: switch_planner}}
+- {id: route-plan-4, question: "When does my ELSS unlock?", expect: {agent: switch_planner}}
+- {id: route-plan-5, question: "What's the break-even?", expect: {agent: switch_planner}}
+- {id: route-scenario-1, question: "What if returns are only 8%?", expect: {agent: scenario}}
+- {id: route-scenario-2, question: "I'm in the 20% slab, does that change anything?", expect: {agent: scenario}}
+- {id: route-scenario-3, question: "What if I switch everything today?", expect: {agent: scenario}}
+- {id: route-scenario-4, question: "Suppose my horizon is 20 years", expect: {agent: scenario}}
+- {id: route-teacher-1, question: "What is an exit load?", expect: {agent: teacher}}
+- {id: route-teacher-2, question: "Explain XIRR like I'm new to investing", expect: {agent: teacher}}
+- {id: route-teacher-3, question: "What does grandfathering mean?", expect: {agent: teacher}}
+- {id: route-teacher-4, question: "What is a trail commission?", expect: {agent: teacher}}

@@ -1,0 +1,4 @@
+# Explanation requests in other languages go to the teacher.
+- {id: lang-hindi, question: "Explain this in Hindi", expect: {agent: teacher}}
+- {id: lang-kannada, question: "Explain my plan in Kannada", expect: {agent: teacher}}
+- {id: lang-new, question: "Explain my report like I'm new to investing", expect: {agent: teacher}}

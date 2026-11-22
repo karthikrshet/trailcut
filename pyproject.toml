@@ -50,6 +50,7 @@ ignore = ["PLR0913", "PLR2004"]
 "**/tests/**" = ["S101", "ANN", "PLR2004", "S603", "PLR0917", "S105", "S106", "S107", "S108", "E501"]
 "tests/**" = ["S101", "ANN", "PLR2004", "S603"]
 "scripts/**" = ["T201", "S603", "S607"]
+"evals/runner.py" = ["T201"]  # command-line report
 
 [tool.ruff.format]
 quote-style = "double"
@@ -76,6 +77,8 @@ warn_required_dynamic_aliases = true
 # ---------- pytest ----------
 [tool.pytest.ini_options]
 addopts = "-ra --strict-markers --strict-config --import-mode=importlib"
+# The repo root holds the evals package used by tests/test_evals.py.
+pythonpath = ["."]
 testpaths = ["packages/engine/tests", "packages/ingest/tests", "packages/agent/tests", "apps/api/tests", "tests"]
 markers = [
   "property: Hypothesis property-based tests",

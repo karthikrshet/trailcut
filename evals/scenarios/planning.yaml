@@ -1,0 +1,12 @@
+# Answers about the sample plan must carry the engine's own figures.
+- {id: plan-tax, question: "How much tax will switching cost?", expect: {must_contain: ["₹44,495"], tools_any: [get_switch_plan]}}
+- {id: plan-exit-load, question: "What exit load will I pay on the switch?", expect: {must_contain: ["₹260"]}}
+- {id: plan-net, question: "What's my net benefit from the plan?", expect: {must_contain: ["₹2,26,589"]}}
+- {id: plan-break-even, question: "When does the switch break even?", expect: {must_contain: ["42 months"]}}
+- {id: plan-next-step, question: "When is the next switch after today?", expect: {must_contain: ["6 Dec 2026"]}}
+- {id: plan-vs-all-now, question: "How does the plan compare with switching everything?", expect: {must_contain: ["₹1,40,991"]}}
+- {id: leak-yearly, question: "How much commission am I paying this year?", expect: {must_contain: ["₹15,644"]}}
+- {id: leak-20y, question: "What does Regular cost me over 20 years?", expect: {must_contain: ["₹22,22,304"]}}
+- {id: summary-value, question: "What is my portfolio worth?", expect: {must_contain: ["₹21,34,155"]}}
+- {id: summary-xirr, question: "What's my XIRR?", expect: {must_contain: ["11.71%"]}}
+- {id: lot-small-cap, question: "Why does lot F6-S1-L001 wait?", expect: {must_contain: ["16 Dec 2026"]}}
