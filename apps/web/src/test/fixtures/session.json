@@ -1,0 +1,948 @@
+{
+ "session_id": "test-session-id",
+ "is_sample": true,
+ "expires_in_seconds": 1800,
+ "report": {
+  "summary": {
+   "as_of": "2026-11-20",
+   "value": "2134154.79",
+   "invested": "1391436.25",
+   "gain": "742718.54",
+   "xirr": "0.11710993",
+   "regular_value": "1898899.10",
+   "direct_value": "235255.69",
+   "schemes": [
+    {
+     "scheme_id": "F1-S1",
+     "name": "Sample Flexi Cap Fund - Regular Plan - Growth",
+     "plan": "regular",
+     "asset_class": "equity",
+     "is_elss": false,
+     "units": "7463.655",
+     "nav": "148.8896",
+     "nav_date": "2026-11-20",
+     "value": "1111260.61",
+     "invested": "580436.25",
+     "gain": "530824.36",
+     "xirr": "0.12932516",
+     "cost_complete": true
+    },
+    {
+     "scheme_id": "F2-S1",
+     "name": "Sample ELSS Tax Saver Fund - Regular Plan - Growth",
+     "plan": "regular",
+     "asset_class": "equity",
+     "is_elss": true,
+     "units": "1109.070",
+     "nav": "98.2395",
+     "nav_date": "2026-11-20",
+     "value": "108954.48",
+     "invested": "84000.00",
+     "gain": "24954.48",
+     "xirr": "0.15443320",
+     "cost_complete": true
+    },
+    {
+     "scheme_id": "F3-S1",
+     "name": "Sample Corporate Bond Fund - Regular Plan - Growth",
+     "plan": "regular",
+     "asset_class": "debt",
+     "is_elss": false,
+     "units": "11352.302",
+     "nav": "35.3192",
+     "nav_date": "2026-11-20",
+     "value": "400954.22",
+     "invested": "300000.00",
+     "gain": "100954.22",
+     "xirr": "0.06677173",
+     "cost_complete": true
+    },
+    {
+     "scheme_id": "F4-S1",
+     "name": "Sample Balanced Advantage Fund - Regular Plan - Growth",
+     "plan": "regular",
+     "asset_class": "equity",
+     "is_elss": false,
+     "units": "4999.750",
+     "nav": "31.4950",
+     "nav_date": "2026-11-20",
+     "value": "157467.13",
+     "invested": "150000.00",
+     "gain": "7467.13",
+     "xirr": "0.07201295",
+     "cost_complete": true
+    },
+    {
+     "scheme_id": "F5-S1",
+     "name": "Sample Nifty 50 Index Fund - Direct Plan - Growth",
+     "plan": "direct",
+     "asset_class": "equity",
+     "is_elss": false,
+     "units": "9216.822",
+     "nav": "25.5246",
+     "nav_date": "2026-11-20",
+     "value": "235255.69",
+     "invested": "177000.00",
+     "gain": "58255.69",
+     "xirr": "0.11722734",
+     "cost_complete": true
+    },
+    {
+     "scheme_id": "F6-S1",
+     "name": "Sample Small Cap Fund - Regular Plan - Growth",
+     "plan": "regular",
+     "asset_class": "equity",
+     "is_elss": false,
+     "units": "1249.938",
+     "nav": "96.2149",
+     "nav_date": "2026-11-20",
+     "value": "120262.66",
+     "invested": "100000.00",
+     "gain": "20262.66",
+     "xirr": "0.21905353",
+     "cost_complete": true
+    }
+   ]
+  },
+  "leaks": [
+   {
+    "scheme_id": "F1-S1",
+    "name": "Sample Flexi Cap Fund - Regular Plan - Growth",
+    "plan": "regular",
+    "value": "1111260.61",
+    "ter_regular": "0.0165",
+    "ter_direct": "0.0070",
+    "yearly_leak": "10556.98",
+    "leak_10y": "266302.30",
+    "leak_20y": "1489845.40"
+   },
+   {
+    "scheme_id": "F2-S1",
+    "name": "Sample ELSS Tax Saver Fund - Regular Plan - Growth",
+    "plan": "regular",
+    "value": "108954.48",
+    "ter_regular": "0.0180",
+    "ter_direct": "0.0075",
+    "yearly_leak": "1144.02",
+    "leak_10y": "28626.14",
+    "leak_20y": "158740.89"
+   },
+   {
+    "scheme_id": "F3-S1",
+    "name": "Sample Corporate Bond Fund - Regular Plan - Growth",
+    "plan": "regular",
+    "value": "400954.22",
+    "ter_regular": "0.0065",
+    "ter_direct": "0.0035",
+    "yearly_leak": "1202.86",
+    "leak_10y": "32040.50",
+    "leak_20y": "190332.66"
+   },
+   {
+    "scheme_id": "F4-S1",
+    "name": "Sample Balanced Advantage Fund - Regular Plan - Growth",
+    "plan": "regular",
+    "value": "157467.13",
+    "ter_regular": "0.0170",
+    "ter_direct": "0.0080",
+    "yearly_leak": "1417.20",
+    "leak_10y": "35531.38",
+    "leak_20y": "197424.93"
+   },
+   {
+    "scheme_id": "F5-S1",
+    "name": "Sample Nifty 50 Index Fund - Direct Plan - Growth",
+    "plan": "direct",
+    "value": "235255.69",
+    "ter_regular": "0.0020",
+    "ter_direct": "0.0020",
+    "yearly_leak": "0",
+    "leak_10y": "0",
+    "leak_20y": "0"
+   },
+   {
+    "scheme_id": "F6-S1",
+    "name": "Sample Small Cap Fund - Regular Plan - Growth",
+    "plan": "regular",
+    "value": "120262.66",
+    "ter_regular": "0.0175",
+    "ter_direct": "0.0065",
+    "yearly_leak": "1322.89",
+    "leak_10y": "33305.02",
+    "leak_20y": "185959.63"
+   }
+  ],
+  "yearly_leak": "15643.95",
+  "leak_10y": "395805.34",
+  "leak_20y": "2222303.51",
+  "growth": [
+   {
+    "year": 0,
+    "regular": "1898899.10",
+    "direct": "1898899.10"
+   },
+   {
+    "year": 1,
+    "regular": "2099082.26",
+    "direct": "2114726.23"
+   },
+   {
+    "year": 2,
+    "regular": "2320402.38",
+    "direct": "2355088.35"
+   },
+   {
+    "year": 3,
+    "regular": "2565094.95",
+    "direct": "2622775.13"
+   },
+   {
+    "year": 4,
+    "regular": "2835632.35",
+    "direct": "2920893.37"
+   },
+   {
+    "year": 5,
+    "regular": "3134748.95",
+    "direct": "3252903.24"
+   },
+   {
+    "year": 6,
+    "regular": "3465468.93",
+    "direct": "3622658.44"
+   },
+   {
+    "year": 7,
+    "regular": "3831137.02",
+    "direct": "4034450.85"
+   },
+   {
+    "year": 8,
+    "regular": "4235452.57",
+    "direct": "4493060.57"
+   },
+   {
+    "year": 9,
+    "regular": "4682507.27",
+    "direct": "5003811.24"
+   },
+   {
+    "year": 10,
+    "regular": "5176826.69",
+    "direct": "5572632.03"
+   },
+   {
+    "year": 11,
+    "regular": "5723416.54",
+    "direct": "6206126.46"
+   },
+   {
+    "year": 12,
+    "regular": "6327813.58",
+    "direct": "6911649.11"
+   },
+   {
+    "year": 13,
+    "regular": "6996142.14",
+    "direct": "7697391.03"
+   },
+   {
+    "year": 14,
+    "regular": "7735176.57",
+    "direct": "8572475.00"
+   },
+   {
+    "year": 15,
+    "regular": "8552410.33",
+    "direct": "9547061.39"
+   },
+   {
+    "year": 16,
+    "regular": "9456132.56",
+    "direct": "10632466.28"
+   },
+   {
+    "year": 17,
+    "regular": "10455512.55",
+    "direct": "11841292.99"
+   },
+   {
+    "year": 18,
+    "regular": "11560693.63",
+    "direct": "13187578.37"
+   },
+   {
+    "year": 19,
+    "regular": "12782896.61",
+    "direct": "14686956.06"
+   },
+   {
+    "year": 20,
+    "regular": "14134534.58",
+    "direct": "16356838.09"
+   }
+  ],
+  "regular_share": "0.8898",
+  "missing_ter": [],
+  "expected_return": "0.12"
+ },
+ "plan": {
+  "as_of": "2026-11-20",
+  "assumptions": {
+   "as_of": "2026-11-20",
+   "expected_return": "0.12",
+   "slab_rate": "0.30",
+   "horizon_years": 10,
+   "other_equity_ltcg_this_fy": "0",
+   "use_next_fy_exemption": true
+  },
+  "decisions": [
+   {
+    "lot_id": "F1-S1-L015",
+    "scheme_id": "F1-S1",
+    "buy_date": "2017-03-05",
+    "units": "9.488",
+    "action": "keep",
+    "reason": "keep_cost_exceeds_benefit",
+    "explanation": "Keep: switching would cost \u20b9121 in tax and exit load, more than the lower fees would earn back over your horizon.",
+    "switch_on": null,
+    "value_now": "1412.66",
+    "sale_value": "0",
+    "exit_load": "0",
+    "gain": "0",
+    "regime": null,
+    "tax": "0",
+    "exemption_used": "0",
+    "net_benefit": "0",
+    "grandfathered": false
+   },
+   {
+    "lot_id": "F1-S1-L016",
+    "scheme_id": "F1-S1",
+    "buy_date": "2017-04-05",
+    "units": "109.308",
+    "action": "switch_now",
+    "reason": "switch_free",
+    "explanation": "Switch now: no tax and no exit load.",
+    "switch_on": "2026-11-20",
+    "value_now": "16274.82",
+    "sale_value": "16274.82",
+    "exit_load": "0.00",
+    "gain": "10761.99",
+    "regime": "equity_ltcg",
+    "tax": "0.00",
+    "exemption_used": "10761.99",
+    "net_benefit": "3900.08",
+    "grandfathered": true
+   },
+   {
+    "lot_id": "F1-S1-L017",
+    "scheme_id": "F1-S1",
+    "buy_date": "2017-05-05",
+    "units": "105.339",
+    "action": "switch_now",
+    "reason": "switch_free",
+    "explanation": "Switch now: no tax and no exit load.",
+    "switch_on": "2026-11-20",
+    "value_now": "15683.88",
+    "sale_value": "15683.88",
+    "exit_load": "0.00",
+    "gain": "10371.22",
+    "regime": "equity_ltcg",
+    "tax": "0.00",
+    "exemption_used": "10371.22",
+    "net_benefit": "3758.48",
+    "grandfathered": true
+   },
+   {
+    "lot_id": "F2-S1-L001",
+    "scheme_id": "F2-S1",
+    "buy_date": "2023-06-10",
+    "units": "33.332",
+    "action": "switch_now",
+    "reason": "switch_worth_it",
+    "explanation": "Switch now: the \u20b9166 cost is outweighed by \u20b9379 of extra value over your horizon.",
+    "switch_on": "2026-11-20",
+    "value_now": "3274.52",
+    "sale_value": "3274.52",
+    "exit_load": "0.00",
+    "gain": "1274.52",
+    "regime": "equity_ltcg",
+    "tax": "165.69",
+    "exemption_used": "0.00",
+    "net_benefit": "379.17",
+    "grandfathered": false
+   },
+   {
+    "lot_id": "F2-S1-L002",
+    "scheme_id": "F2-S1",
+    "buy_date": "2023-07-10",
+    "units": "33.438",
+    "action": "switch_now",
+    "reason": "switch_worth_it",
+    "explanation": "Switch now: the \u20b9167 cost is outweighed by \u20b9378 of extra value over your horizon.",
+    "switch_on": "2026-11-20",
+    "value_now": "3284.93",
+    "sale_value": "3284.93",
+    "exit_load": "0.00",
+    "gain": "1284.93",
+    "regime": "equity_ltcg",
+    "tax": "167.04",
+    "exemption_used": "0.00",
+    "net_benefit": "377.97",
+    "grandfathered": false
+   },
+   {
+    "lot_id": "F2-S1-L003",
+    "scheme_id": "F2-S1",
+    "buy_date": "2023-08-10",
+    "units": "32.160",
+    "action": "switch_now",
+    "reason": "switch_worth_it",
+    "explanation": "Switch now: the \u20b9151 cost is outweighed by \u20b9392 of extra value over your horizon.",
+    "switch_on": "2026-11-20",
+    "value_now": "3159.38",
+    "sale_value": "3159.38",
+    "exit_load": "0.00",
+    "gain": "1159.38",
+    "regime": "equity_ltcg",
+    "tax": "150.72",
+    "exemption_used": "0.00",
+    "net_benefit": "392.38",
+    "grandfathered": false
+   },
+   {
+    "lot_id": "F3-S1-L001",
+    "scheme_id": "F3-S1",
+    "buy_date": "2021-08-10",
+    "units": "7999.600",
+    "action": "keep",
+    "reason": "keep_cost_exceeds_benefit",
+    "explanation": "Keep: switching would cost \u20b910,730 in tax and exit load, more than the lower fees would earn back over your horizon.",
+    "switch_on": null,
+    "value_now": "282539.47",
+    "sale_value": "0",
+    "exit_load": "0",
+    "gain": "0",
+    "regime": null,
+    "tax": "0",
+    "exemption_used": "0",
+    "net_benefit": "0",
+    "grandfathered": false
+   },
+   {
+    "lot_id": "F3-S1-L002",
+    "scheme_id": "F3-S1",
+    "buy_date": "2024-02-15",
+    "units": "3352.702",
+    "action": "keep",
+    "reason": "keep_cost_exceeds_benefit",
+    "explanation": "Keep: switching would cost \u20b95,745 in tax and exit load, more than the lower fees would earn back over your horizon.",
+    "switch_on": null,
+    "value_now": "118414.75",
+    "sale_value": "0",
+    "exit_load": "0",
+    "gain": "0",
+    "regime": null,
+    "tax": "0",
+    "exemption_used": "0",
+    "net_benefit": "0",
+    "grandfathered": false
+   },
+   {
+    "lot_id": "F4-S1-L001",
+    "scheme_id": "F4-S1",
+    "buy_date": "2026-03-10",
+    "units": "4999.750",
+    "action": "wait",
+    "reason": "wait_long_term",
+    "explanation": "Wait until 11 Mar 2027: the gain becomes long term and is taxed at a lower rate.",
+    "switch_on": "2027-03-11",
+    "value_now": "157467.13",
+    "sale_value": "162232.37",
+    "exit_load": "0.00",
+    "gain": "12232.37",
+    "regime": "equity_ltcg",
+    "tax": "0.00",
+    "exemption_used": "12232.37",
+    "net_benefit": "34407.72",
+    "grandfathered": false
+   },
+   {
+    "lot_id": "F5-S1-L001",
+    "scheme_id": "F5-S1",
+    "buy_date": "2022-01-07",
+    "units": "199.990",
+    "action": "keep",
+    "reason": "already_direct",
+    "explanation": "Already in a Direct plan, so there is no commission to cut.",
+    "switch_on": null,
+    "value_now": "5104.66",
+    "sale_value": "0",
+    "exit_load": "0",
+    "gain": "0",
+    "regime": null,
+    "tax": "0",
+    "exemption_used": "0",
+    "net_benefit": "0",
+    "grandfathered": false
+   },
+   {
+    "lot_id": "F5-S1-L002",
+    "scheme_id": "F5-S1",
+    "buy_date": "2022-02-07",
+    "units": "201.224",
+    "action": "keep",
+    "reason": "already_direct",
+    "explanation": "Already in a Direct plan, so there is no commission to cut.",
+    "switch_on": null,
+    "value_now": "5136.16",
+    "sale_value": "0",
+    "exit_load": "0",
+    "gain": "0",
+    "regime": null,
+    "tax": "0",
+    "exemption_used": "0",
+    "net_benefit": "0",
+    "grandfathered": false
+   },
+   {
+    "lot_id": "F5-S1-L003",
+    "scheme_id": "F5-S1",
+    "buy_date": "2022-03-07",
+    "units": "194.109",
+    "action": "keep",
+    "reason": "already_direct",
+    "explanation": "Already in a Direct plan, so there is no commission to cut.",
+    "switch_on": null,
+    "value_now": "4954.55",
+    "sale_value": "0",
+    "exit_load": "0",
+    "gain": "0",
+    "regime": null,
+    "tax": "0",
+    "exemption_used": "0",
+    "net_benefit": "0",
+    "grandfathered": false
+   },
+   {
+    "lot_id": "F6-S1-L001",
+    "scheme_id": "F6-S1",
+    "buy_date": "2025-12-15",
+    "units": "1249.938",
+    "action": "wait",
+    "reason": "wait_long_term",
+    "explanation": "Wait until 16 Dec 2026: the gain becomes long term and is taxed at a lower rate.",
+    "switch_on": "2026-12-16",
+    "value_now": "120262.66",
+    "sale_value": "121101.51",
+    "exit_load": "0.00",
+    "gain": "21101.51",
+    "regime": "equity_ltcg",
+    "tax": "0.00",
+    "exemption_used": "21101.51",
+    "net_benefit": "33055.90",
+    "grandfathered": false
+   }
+  ],
+  "schemes": [
+   {
+    "scheme_id": "F1-S1",
+    "name": "Sample Flexi Cap Fund - Regular Plan - Growth",
+    "plan": "regular",
+    "value": "1111260.61",
+    "ter_regular": "0.0165",
+    "ter_direct": "0.0070",
+    "yearly_leak": "10556.98",
+    "actions": {
+     "keep": 1,
+     "switch_now": 95,
+     "wait": 21
+    },
+    "net_benefit": "142159.29"
+   },
+   {
+    "scheme_id": "F2-S1",
+    "name": "Sample ELSS Tax Saver Fund - Regular Plan - Growth",
+    "plan": "regular",
+    "value": "108954.48",
+    "ter_regular": "0.0180",
+    "ter_direct": "0.0075",
+    "yearly_leak": "1144.02",
+    "actions": {
+     "switch_now": 6,
+     "wait": 36
+    },
+    "net_benefit": "16965.89"
+   },
+   {
+    "scheme_id": "F3-S1",
+    "name": "Sample Corporate Bond Fund - Regular Plan - Growth",
+    "plan": "regular",
+    "value": "400954.22",
+    "ter_regular": "0.0065",
+    "ter_direct": "0.0035",
+    "yearly_leak": "1202.86",
+    "actions": {
+     "keep": 2
+    },
+    "net_benefit": "0.00"
+   },
+   {
+    "scheme_id": "F4-S1",
+    "name": "Sample Balanced Advantage Fund - Regular Plan - Growth",
+    "plan": "regular",
+    "value": "157467.13",
+    "ter_regular": "0.0170",
+    "ter_direct": "0.0080",
+    "yearly_leak": "1417.20",
+    "actions": {
+     "wait": 1
+    },
+    "net_benefit": "34407.72"
+   },
+   {
+    "scheme_id": "F5-S1",
+    "name": "Sample Nifty 50 Index Fund - Direct Plan - Growth",
+    "plan": "direct",
+    "value": "235255.69",
+    "ter_regular": "0.0020",
+    "ter_direct": "0.0020",
+    "yearly_leak": null,
+    "actions": {
+     "keep": 59
+    },
+    "net_benefit": "0.00"
+   },
+   {
+    "scheme_id": "F6-S1",
+    "name": "Sample Small Cap Fund - Regular Plan - Growth",
+    "plan": "regular",
+    "value": "120262.66",
+    "ter_regular": "0.0175",
+    "ter_direct": "0.0065",
+    "yearly_leak": "1322.89",
+    "actions": {
+     "wait": 1
+    },
+    "net_benefit": "33055.90"
+   }
+  ],
+  "totals": {
+   "switch_value": "1496532.17",
+   "tax": "44494.85",
+   "exit_load": "259.89",
+   "net_benefit": "226588.80",
+   "break_even_months": 42,
+   "lots_switched": 160
+  },
+  "switch_all_now": {
+   "switch_value": "1809057.05",
+   "tax": "75315.93",
+   "exit_load": "3424.68",
+   "net_benefit": "140990.63",
+   "break_even_months": 73,
+   "lots_switched": 127
+  },
+  "never_switch": {
+   "switch_value": "0",
+   "tax": "0",
+   "exit_load": "0",
+   "net_benefit": "0",
+   "break_even_months": null,
+   "lots_switched": 0
+  },
+  "fy_tax": [
+   {
+    "financial_year": "2026-27",
+    "gains": {
+     "equity_stcg": "729.08",
+     "equity_ltcg": "447813.19",
+     "other_ltcg": "0",
+     "slab": "0"
+    },
+    "exemption_used": "125000.00",
+    "tax": "42117.36",
+    "rules_assumed": false
+   },
+   {
+    "financial_year": "2027-28",
+    "gains": {
+     "equity_stcg": "0",
+     "equity_ltcg": "143207.72",
+     "other_ltcg": "0",
+     "slab": "0"
+    },
+    "exemption_used": "125000.00",
+    "tax": "2367.00",
+    "rules_assumed": true
+   },
+   {
+    "financial_year": "2028-29",
+    "gains": {
+     "equity_stcg": "0",
+     "equity_ltcg": "9932.90",
+     "other_ltcg": "0",
+     "slab": "0"
+    },
+    "exemption_used": "9932.90",
+    "tax": "0.00",
+    "rules_assumed": true
+   },
+   {
+    "financial_year": "2029-30",
+    "gains": {
+     "equity_stcg": "0",
+     "equity_ltcg": "5743.08",
+     "other_ltcg": "0",
+     "slab": "0"
+    },
+    "exemption_used": "5743.08",
+    "tax": "0.00",
+    "rules_assumed": true
+   }
+  ],
+  "timeline": [
+   {
+    "on": "2026-11-20",
+    "lots": 101,
+    "value": "897488.87",
+    "label": "Now"
+   },
+   {
+    "on": "2026-12-06",
+    "lots": 3,
+    "value": "128994.03",
+    "label": "Dec 2026"
+   },
+   {
+    "on": "2027-01-06",
+    "lots": 2,
+    "value": "8736.88",
+    "label": "Jan 2027"
+   },
+   {
+    "on": "2027-02-06",
+    "lots": 2,
+    "value": "8538.56",
+    "label": "Feb 2027"
+   },
+   {
+    "on": "2027-03-06",
+    "lots": 3,
+    "value": "165940.13",
+    "label": "Mar 2027"
+   },
+   {
+    "on": "2027-04-01",
+    "lots": 16,
+    "value": "201010.50",
+    "label": "Apr 2027"
+   },
+   {
+    "on": "2027-05-06",
+    "lots": 2,
+    "value": "8353.42",
+    "label": "May 2027"
+   },
+   {
+    "on": "2027-06-06",
+    "lots": 2,
+    "value": "8245.40",
+    "label": "Jun 2027"
+   },
+   {
+    "on": "2027-07-10",
+    "lots": 1,
+    "value": "2792.95",
+    "label": "Jul 2027"
+   },
+   {
+    "on": "2027-08-10",
+    "lots": 1,
+    "value": "2770.85",
+    "label": "Aug 2027"
+   },
+   {
+    "on": "2027-09-10",
+    "lots": 1,
+    "value": "2779.69",
+    "label": "Sep 2027"
+   },
+   {
+    "on": "2027-10-10",
+    "lots": 1,
+    "value": "2673.49",
+    "label": "Oct 2027"
+   },
+   {
+    "on": "2027-11-10",
+    "lots": 1,
+    "value": "2692.35",
+    "label": "Nov 2027"
+   },
+   {
+    "on": "2027-12-10",
+    "lots": 1,
+    "value": "2587.43",
+    "label": "Dec 2027"
+   },
+   {
+    "on": "2028-01-10",
+    "lots": 1,
+    "value": "2669.17",
+    "label": "Jan 2028"
+   },
+   {
+    "on": "2028-02-10",
+    "lots": 1,
+    "value": "2569.26",
+    "label": "Feb 2028"
+   },
+   {
+    "on": "2028-03-10",
+    "lots": 1,
+    "value": "2548.92",
+    "label": "Mar 2028"
+   },
+   {
+    "on": "2028-04-10",
+    "lots": 1,
+    "value": "2557.08",
+    "label": "Apr 2028"
+   },
+   {
+    "on": "2028-05-10",
+    "lots": 1,
+    "value": "2459.33",
+    "label": "May 2028"
+   },
+   {
+    "on": "2028-06-10",
+    "lots": 1,
+    "value": "2476.62",
+    "label": "Jun 2028"
+   },
+   {
+    "on": "2028-07-10",
+    "lots": 1,
+    "value": "2380.15",
+    "label": "Jul 2028"
+   },
+   {
+    "on": "2028-08-10",
+    "lots": 1,
+    "value": "2455.30",
+    "label": "Aug 2028"
+   },
+   {
+    "on": "2028-09-10",
+    "lots": 1,
+    "value": "2363.35",
+    "label": "Sep 2028"
+   },
+   {
+    "on": "2028-10-10",
+    "lots": 1,
+    "value": "2344.68",
+    "label": "Oct 2028"
+   },
+   {
+    "on": "2028-11-10",
+    "lots": 1,
+    "value": "2352.15",
+    "label": "Nov 2028"
+   },
+   {
+    "on": "2028-12-10",
+    "lots": 1,
+    "value": "2262.26",
+    "label": "Dec 2028"
+   },
+   {
+    "on": "2029-01-10",
+    "lots": 1,
+    "value": "2278.27",
+    "label": "Jan 2029"
+   },
+   {
+    "on": "2029-02-10",
+    "lots": 1,
+    "value": "2189.46",
+    "label": "Feb 2029"
+   },
+   {
+    "on": "2029-03-10",
+    "lots": 1,
+    "value": "2258.62",
+    "label": "Mar 2029"
+   },
+   {
+    "on": "2029-04-10",
+    "lots": 1,
+    "value": "2174.04",
+    "label": "Apr 2029"
+   },
+   {
+    "on": "2029-05-10",
+    "lots": 1,
+    "value": "2156.85",
+    "label": "May 2029"
+   },
+   {
+    "on": "2029-06-10",
+    "lots": 1,
+    "value": "2163.72",
+    "label": "Jun 2029"
+   },
+   {
+    "on": "2029-07-10",
+    "lots": 1,
+    "value": "2081.01",
+    "label": "Jul 2029"
+   },
+   {
+    "on": "2029-08-10",
+    "lots": 1,
+    "value": "2095.74",
+    "label": "Aug 2029"
+   },
+   {
+    "on": "2029-09-10",
+    "lots": 1,
+    "value": "2014.11",
+    "label": "Sep 2029"
+   },
+   {
+    "on": "2029-10-10",
+    "lots": 1,
+    "value": "2077.67",
+    "label": "Oct 2029"
+   },
+   {
+    "on": "2029-11-10",
+    "lots": 1,
+    "value": "1999.86",
+    "label": "Nov 2029"
+   }
+  ],
+  "notes": [
+   "FY 2027-28 tax rules aren't published yet; current rules assumed.",
+   "FY 2028-29 tax rules aren't published yet; current rules assumed.",
+   "FY 2029-30 tax rules aren't published yet; current rules assumed.",
+   "Tax excludes surcharge; it assumes total income under Rs 50 lakh."
+  ]
+ },
+ "assumptions": {
+  "as_of": "2026-11-20",
+  "expected_return": "0.12",
+  "slab_rate": "0.30",
+  "horizon_years": 10,
+  "other_equity_ltcg_this_fy": "0",
+  "use_next_fy_exemption": true
+ },
+ "notes": [
+  "Sample portfolio: all funds and numbers are fictional, as of 20 Nov 2026."
+ ],
+ "disclaimer": "TrailCut is a calculator and explainer, not investment advice. It never places orders or recommends funds to buy. Check figures with your AMC or a SEBI-registered adviser before acting."
+}
