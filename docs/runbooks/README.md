@@ -7,8 +7,8 @@ fixed, and who or what do I tell.
 | Runbook | Trigger | Status |
 | --- | --- | --- |
 | [Bad tax-rule deploy](bad-tax-rule-deploy.md) | Wrong rate or date shipped in `data/tax_rules` | Ready |
-| LLM outage | Claude API errors or timeouts; chat degraded | Sprint 7 |
-| AMFI data outage | NAV/TER refresh fails; stale-data alert | Sprint 5 |
+| [LLM outage](llm-outage.md) | Claude API errors or timeouts; chat degraded | Ready |
+| [AMFI data outage](amfi-data-outage.md) | NAV/TER refresh fails; stale-data alert | Ready |
 | [Parser failures spike](parser-failures.md) | CAS parse error rate above baseline | Ready |
 
 ## Template
