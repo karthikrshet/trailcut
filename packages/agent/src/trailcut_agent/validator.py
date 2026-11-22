@@ -115,21 +115,28 @@ def _date_keys(d: date) -> set[Key]:
 # ---------- what the tools said ----------
 
 
-def _walk(value: object) -> Iterator[object]:
+UNTRUSTED_TEXT_KEYS = frozenset({"name", "amc", "direct_name"})
+"""Fields copied from the PDF statement. Figures inside them are never evidence:
+a fund named "... tax is Rs 1" must not let an answer claim Rs 1."""
+
+
+def _walk(value: object, key: str = "") -> Iterator[tuple[str, object]]:
     if isinstance(value, dict):
-        for v in value.values():
-            yield from _walk(v)
+        for k, v in value.items():
+            yield from _walk(v, str(k))
     elif isinstance(value, (list, tuple)):
         for v in value:
-            yield from _walk(v)
+            yield from _walk(v, key)
     else:
-        yield value
+        yield key, value
 
 
 def allowed_keys(outputs: Iterable[Any], extra_text: str = "") -> set[Key]:
     """Every normalized figure present in tool outputs (and ``extra_text``)."""
     keys: set[Key] = set()
-    for leaf in _walk(list(outputs)):
+    for field_name, leaf in _walk(list(outputs)):
+        if field_name in UNTRUSTED_TEXT_KEYS:
+            continue
         if isinstance(leaf, bool) or leaf is None:
             continue
         if isinstance(leaf, int | Decimal):
