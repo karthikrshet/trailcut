@@ -94,4 +94,11 @@ describe('ChatDrawer', () => {
     renderUi(<ChatDrawer isOpen onClose={vi.fn()} ask={vi.fn()} />);
     expect(screen.getByText(/No funds are recommended/)).toBeInTheDocument();
   });
+
+  it('closes on Escape', async () => {
+    const onClose = vi.fn();
+    renderUi(<ChatDrawer isOpen onClose={onClose} ask={vi.fn()} />);
+    await userEvent.keyboard('{Escape}');
+    expect(onClose).toHaveBeenCalled();
+  });
 });

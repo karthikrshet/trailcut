@@ -1,8 +1,10 @@
 import { Box, Text, useTheme } from '@razorpay/blade/components';
 import { motion, useReducedMotionConfig } from 'motion/react';
+import { useState } from 'react';
 
 import type { GrowthPoint } from '../api/types';
 import { formatINR } from '../lib/format';
+import { pageIsVisible } from '../lib/visibility';
 
 const W = 640;
 const H = 260;
@@ -15,6 +17,8 @@ const PAD = { top: 16, right: 16, bottom: 28, left: 16 };
 export function GrowthChart({ points }: { points: GrowthPoint[] }) {
   const { theme } = useTheme();
   const reduce = useReducedMotionConfig();
+  // Draw-in only when on screen; hidden pages pause frames and would show empty lines.
+  const [animated] = useState(() => !reduce && pageIsVisible());
   if (points.length < 2) return null;
   const regular = points.map((p) => Number(p.regular));
   const direct = points.map((p) => Number(p.direct));
@@ -26,7 +30,7 @@ export function GrowthChart({ points }: { points: GrowthPoint[] }) {
   const gap = `${line(direct)} ${[...regular].reverse().map((v, i) => `L${String(x(points[points.length - 1 - i]?.year ?? 0))},${String(y(v))}`).join(' ')} Z`;
   const colors = theme.colors;
   const last = points[points.length - 1];
-  const draw = reduce ? { pathLength: 1 } : { pathLength: [0, 1] };
+  const draw = animated ? { pathLength: [0, 1] } : { pathLength: 1 };
 
   return (
     <Box display="flex" flexDirection="column" gap="spacing.3">
@@ -44,12 +48,12 @@ export function GrowthChart({ points }: { points: GrowthPoint[] }) {
         <motion.path
           d={gap}
           fill={colors.feedback.background.negative.subtle}
-          initial={{ opacity: 0 }}
+          initial={animated ? { opacity: 0 } : false}
           animate={{ opacity: 1 }}
-          transition={{ delay: reduce ? 0 : 0.8, duration: reduce ? 0.2 : 0.3 }}
+          transition={{ delay: animated ? 0.8 : 0, duration: animated ? 0.3 : 0 }}
         />
-        <motion.path d={line(direct)} fill="none" stroke={colors.interactive.background.positive.default} strokeWidth={3} animate={draw} transition={{ duration: reduce ? 0 : 0.8 }} />
-        <motion.path d={line(regular)} fill="none" stroke={colors.interactive.icon.gray.muted} strokeWidth={3} strokeDasharray="6 4" animate={draw} transition={{ duration: reduce ? 0 : 0.8 }} />
+        <motion.path d={line(direct)} fill="none" stroke={colors.interactive.background.positive.default} strokeWidth={3} animate={draw} transition={{ duration: animated ? 0.8 : 0 }} />
+        <motion.path d={line(regular)} fill="none" stroke={colors.interactive.icon.gray.muted} strokeWidth={3} strokeDasharray="6 4" animate={draw} transition={{ duration: animated ? 0.8 : 0 }} />
         {[0, 5, 10, 15, 20].filter((t) => t <= lastYear).map((t) => (
           <text key={t} x={x(t)} y={H - 8} textAnchor="middle" fontSize="12" fill={colors.surface.text.gray.muted}>
             {t === 0 ? 'Today' : `${String(t)}y`}

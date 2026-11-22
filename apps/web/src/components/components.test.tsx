@@ -126,3 +126,12 @@ describe('GrowthChart', () => {
     expect(container.querySelector('svg')).toBeNull();
   });
 });
+
+describe('animations on hidden pages', () => {
+  it('shows the final value immediately when the page is not visible', () => {
+    const spy = vi.spyOn(document, 'visibilityState', 'get').mockReturnValue('hidden');
+    renderUi(<CountUp value="2222303.51" options={{ compact: true }} />);
+    expect(screen.getByText('₹22.2L')).toBeInTheDocument();
+    spy.mockRestore();
+  });
+});

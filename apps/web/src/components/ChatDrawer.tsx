@@ -9,7 +9,7 @@ import {
   Text,
   TextArea,
 } from '@razorpay/blade/components';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { LuSend, LuShieldCheck, LuSparkles } from 'react-icons/lu';
 
 import { ApiError } from '../api/client';
@@ -34,6 +34,18 @@ export function ChatDrawer({
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [showTrace, setShowTrace] = useState<number | null>(null);
+
+  // Dialogs close on Escape (keyboard users).
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [isOpen, onClose]);
 
   const send = async (text: string) => {
     const question = text.trim();
