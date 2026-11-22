@@ -19,7 +19,8 @@ RESULT_PLACES = Decimal("0.00000001")
 LOWER = Decimal("-0.999999")
 UPPER = Decimal(100)
 TOLERANCE = Decimal("1e-12")
-MAX_ITERATIONS = 300
+MAX_ITERATIONS = 200
+GUESS = Decimal("0.1")
 
 Cashflow = tuple[date, Decimal]
 
@@ -28,16 +29,28 @@ class XirrError(ValueError):
     """Raised when XIRR has no solution for the given cashflows."""
 
 
-def _npv(rate: Decimal, flows: Sequence[tuple[Decimal, Decimal]]) -> Decimal:
+def _npv_and_slope(
+    rate: Decimal, flows: Sequence[tuple[Decimal, Decimal]]
+) -> tuple[Decimal, Decimal]:
+    """NPV at ``rate`` and its derivative d(NPV)/d(rate)."""
     base = 1 + rate
-    return sum((amount / base**years for years, amount in flows), Decimal(0))
+    log_base = base.ln()
+    npv = Decimal(0)
+    slope = Decimal(0)
+    for years, amount in flows:
+        discounted = amount / (years * log_base).exp()
+        npv += discounted
+        slope -= years * discounted / base
+    return npv, slope
 
 
 def xirr(cashflows: Sequence[Cashflow]) -> Decimal:
     """Annualised return as a fraction (0.12 = 12% a year), to 8 decimal places.
 
-    Uses bisection on [-99.9999%, 10,000%], which always converges when a sign
-    change exists, so there is no dependence on a starting guess.
+    Safeguarded Newton's method: Newton steps inside a bracket on
+    [-99.9999%, 10,000%] that always contains the root, falling back to bisection
+    whenever a step would leave it. Converges like Newton (a handful of
+    iterations) with the guarantee of bisection, and needs no starting guess.
 
     Raises:
         XirrError: fewer than two cashflows, all on one date, or no sign change
@@ -59,19 +72,28 @@ def xirr(cashflows: Sequence[Cashflow]) -> Decimal:
         ctx.prec = 34
         timed = [(Decimal((d - start).days) / DAYS_PER_YEAR, a) for d, a in flows]
         lo, hi = LOWER, UPPER
-        f_lo, f_hi = _npv(lo, timed), _npv(hi, timed)
+        f_lo, _ = _npv_and_slope(lo, timed)
+        f_hi, _ = _npv_and_slope(hi, timed)
         if f_lo == 0:
             return lo.quantize(RESULT_PLACES)
         if (f_lo > 0) == (f_hi > 0):
             msg = "no rate between -99.9999% and 10,000% sets NPV to zero"
             raise XirrError(msg)
+        rate = GUESS if lo < GUESS < hi else (lo + hi) / 2
         for _ in range(MAX_ITERATIONS):
-            mid = (lo + hi) / 2
-            f_mid = _npv(mid, timed)
-            if f_mid == 0 or (hi - lo) / 2 < TOLERANCE:
-                break
-            if (f_mid > 0) == (f_lo > 0):
-                lo, f_lo = mid, f_mid
+            f, slope = _npv_and_slope(rate, timed)
+            if f == 0:
+                return rate.quantize(RESULT_PLACES)
+            # Shrink the bracket around the root.
+            if (f > 0) == (f_lo > 0):
+                lo, f_lo = rate, f
             else:
-                hi = mid
-        return ((lo + hi) / 2).quantize(RESULT_PLACES)
+                hi = rate
+            step = f / slope if slope != 0 else None
+            candidate = rate - step if step is not None else None
+            if candidate is None or not lo < candidate < hi:
+                candidate = (lo + hi) / 2  # Newton would leave the bracket: bisect
+            if abs(candidate - rate) < TOLERANCE or hi - lo < TOLERANCE:
+                return candidate.quantize(RESULT_PLACES)
+            rate = candidate
+        return rate.quantize(RESULT_PLACES)
