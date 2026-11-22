@@ -5,10 +5,13 @@ description = "TrailCut HTTP API (FastAPI)."
 requires-python = ">=3.12,<3.13"
 dependencies = [
   "trailcut-engine",
+  "trailcut-ingest",
   "trailcut-agent",
   "fastapi>=0.115",
   "uvicorn[standard]>=0.32",
   "pydantic>=2.10",
+  "pyyaml>=6.0",  # read tax rules and exit-load defaults
+  "python-multipart>=0.0.20",  # FastAPI needs it to parse multipart PDF uploads
 ]
 
 [build-system]
