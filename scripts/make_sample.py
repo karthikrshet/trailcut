@@ -16,6 +16,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "packages" / "ingest" / "src" / "trailcut_ingest" / "samples" / "sample_cas.json"
+MARKET_OUT = ROOT / "data" / "samples" / "sample_market.json"
 STATEMENT_DATE = date(2026, 11, 20)
 STAMP_DUTY_FROM = date(2020, 7, 1)
 STAMP_DUTY_RATE = Decimal("0.00005")  # 0.005% on purchases since 1 Jul 2020
@@ -265,10 +266,41 @@ def build() -> dict[str, object]:
     }
 
 
+# Fictional expense ratios (yearly) and exit loads for the sample funds, keyed by ISIN.
+MARKET_TERMS: dict[str, tuple[str, str, int | None, str | None]] = {
+    "INF000S01011": ("0.0165", "0.0070", 365, "0.01"),
+    "INF000S01029": ("0.0180", "0.0075", None, None),
+    "INF000D01017": ("0.0065", "0.0035", None, None),
+    "INF000S01037": ("0.0170", "0.0080", 365, "0.01"),
+    "INF000I01015": ("0.0020", "0.0020", None, None),
+    "INF000S01045": ("0.0175", "0.0065", 365, "0.01"),
+}
+
+
+def build_market() -> dict[str, object]:
+    schemes: dict[str, object] = {}
+    for f in FUNDS:
+        ter_regular, ter_direct, days, rate = MARKET_TERMS[f.isin]
+        tiers = [] if days is None else [{"within_days": days, "rate": rate}]
+        entry: dict[str, object] = {
+            "ter_regular": ter_regular,
+            "ter_direct": ter_direct,
+            "direct_name": f.name.replace("Regular Plan", "Direct Plan"),
+            "exit_load": {"tiers": tiers, "source": "synthetic sample"},
+            "source": "synthetic sample",
+            "as_of": STATEMENT_DATE.isoformat(),
+        }
+        if f.nav_start_date <= date(2018, 1, 31):
+            entry["fmv_2018_per_unit"] = str(f.nav(date(2018, 1, 31)))
+        schemes[f.isin] = entry
+    return {"as_of": STATEMENT_DATE.isoformat(), "source": "synthetic sample", "schemes": schemes}
+
+
 def main() -> None:
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(build(), indent=1) + "\n", encoding="utf-8", newline="\n")
-    print(f"wrote {OUT.relative_to(ROOT)}")
+    for path, data in ((OUT, build()), (MARKET_OUT, build_market())):
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(data, indent=1) + "\n", encoding="utf-8", newline="\n")
+        print(f"wrote {path.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

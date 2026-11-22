@@ -12,12 +12,14 @@ Example:
 
 from __future__ import annotations
 
+from collections.abc import Mapping
 from datetime import date, timedelta
 from decimal import Decimal
 from typing import Annotated, Self
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
+from trailcut_engine.portfolio import Portfolio
 from trailcut_engine.types import DecimalField
 
 ZERO = Decimal(0)
@@ -108,3 +110,26 @@ class MarketData(_Model):
     def for_scheme(self, scheme_id: str) -> SchemeMarket:
         """Data for a scheme, or an empty record (everything unknown)."""
         return self.schemes.get(scheme_id, SchemeMarket())
+
+
+def market_for_portfolio(
+    portfolio: Portfolio,
+    by_isin: Mapping[str, SchemeMarket],
+    *,
+    as_of: date | None = None,
+    source: str = "unknown",
+) -> MarketData:
+    """Attach per-ISIN market data to a portfolio's schemes.
+
+    Schemes without an ISIN, or with an ISIN we have no data for, get nothing
+    (and the planner marks them for review).
+
+    Example:
+        >>> md = market_for_portfolio(p, {"INF000S01011": SchemeMarket()})  # doctest: +SKIP
+    """
+    schemes = {
+        s.scheme_id: by_isin[s.isin]
+        for s in portfolio.schemes
+        if s.isin is not None and s.isin in by_isin
+    }
+    return MarketData(schemes=schemes, as_of=as_of, source=source)

@@ -1,0 +1,88 @@
+{
+ "as_of": "2026-11-20",
+ "source": "synthetic sample",
+ "schemes": {
+  "INF000S01011": {
+   "ter_regular": "0.0165",
+   "ter_direct": "0.0070",
+   "direct_name": "Sample Flexi Cap Fund - Direct Plan - Growth",
+   "exit_load": {
+    "tiers": [
+     {
+      "within_days": 365,
+      "rate": "0.01"
+     }
+    ],
+    "source": "synthetic sample"
+   },
+   "source": "synthetic sample",
+   "as_of": "2026-11-20",
+   "fmv_2018_per_unit": "50.4339"
+  },
+  "INF000S01029": {
+   "ter_regular": "0.0180",
+   "ter_direct": "0.0075",
+   "direct_name": "Sample ELSS Tax Saver Fund - Direct Plan - Growth",
+   "exit_load": {
+    "tiers": [],
+    "source": "synthetic sample"
+   },
+   "source": "synthetic sample",
+   "as_of": "2026-11-20"
+  },
+  "INF000D01017": {
+   "ter_regular": "0.0065",
+   "ter_direct": "0.0035",
+   "direct_name": "Sample Corporate Bond Fund - Direct Plan - Growth",
+   "exit_load": {
+    "tiers": [],
+    "source": "synthetic sample"
+   },
+   "source": "synthetic sample",
+   "as_of": "2026-11-20"
+  },
+  "INF000S01037": {
+   "ter_regular": "0.0170",
+   "ter_direct": "0.0080",
+   "direct_name": "Sample Balanced Advantage Fund - Direct Plan - Growth",
+   "exit_load": {
+    "tiers": [
+     {
+      "within_days": 365,
+      "rate": "0.01"
+     }
+    ],
+    "source": "synthetic sample"
+   },
+   "source": "synthetic sample",
+   "as_of": "2026-11-20"
+  },
+  "INF000I01015": {
+   "ter_regular": "0.0020",
+   "ter_direct": "0.0020",
+   "direct_name": "Sample Nifty 50 Index Fund - Direct Plan - Growth",
+   "exit_load": {
+    "tiers": [],
+    "source": "synthetic sample"
+   },
+   "source": "synthetic sample",
+   "as_of": "2026-11-20"
+  },
+  "INF000S01045": {
+   "ter_regular": "0.0175",
+   "ter_direct": "0.0065",
+   "direct_name": "Sample Small Cap Fund - Direct Plan - Growth",
+   "exit_load": {
+    "tiers": [
+     {
+      "within_days": 365,
+      "rate": "0.01"
+     }
+    ],
+    "source": "synthetic sample"
+   },
+   "source": "synthetic sample",
+   "as_of": "2026-11-20"
+  }
+ }
+}

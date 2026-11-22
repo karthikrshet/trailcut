@@ -31,3 +31,9 @@ def test_committed_sample_matches_generator() -> None:
 def test_generator_is_deterministic() -> None:
     gen = load_generator()
     assert json.dumps(gen.build()) == json.dumps(gen.build())
+
+
+def test_committed_sample_market_matches_generator() -> None:
+    gen = load_generator()
+    committed = json.loads(gen.MARKET_OUT.read_text(encoding="utf-8"))
+    assert committed == json.loads(json.dumps(gen.build_market()))
