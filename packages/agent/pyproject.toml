@@ -5,7 +5,9 @@ description = "TrailCut Claude tool-calling agents and the numeric-claim respons
 requires-python = ">=3.12,<3.13"
 dependencies = [
   "trailcut-engine",
+  "trailcut-ingest",  # PII masking before any text reaches the model
   "pydantic>=2.10",
+  "anthropic>=2.12.0",  # official Claude SDK for the chat agents
 ]
 
 [build-system]
