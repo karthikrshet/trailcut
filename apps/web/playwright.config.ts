@@ -18,10 +18,23 @@ export default defineConfig({
     // UI rule: every screen works at 375 px.
     { name: 'mobile-375', use: { ...devices['Desktop Chrome'], viewport: { width: 375, height: 812 } } },
   ],
-  webServer: {
-    command: `pnpm build && pnpm preview --host 127.0.0.1 --port ${String(PORT)} --strictPort`,
-    url: `http://127.0.0.1:${String(PORT)}`,
-    reuseExistingServer: !isCI,
-    timeout: 180_000,
-  },
+  testIgnore: /\.shot\.ts$/,
+  webServer: [
+    {
+      // The real API on its own port, so a running dev server doesn't interfere.
+      command: 'uv run uvicorn trailcut_api.main:app --port 8001 --no-access-log',
+      cwd: '../..',
+      url: 'http://127.0.0.1:8001/health',
+      reuseExistingServer: !isCI,
+      timeout: 180_000,
+      env: { TRAILCUT_RATE_LIMIT: '1000', TRAILCUT_ALLOWED_ORIGINS: `http://127.0.0.1:${String(PORT)}` },
+    },
+    {
+      command: `pnpm build && pnpm preview --host 127.0.0.1 --port ${String(PORT)} --strictPort`,
+      url: `http://127.0.0.1:${String(PORT)}`,
+      reuseExistingServer: !isCI,
+      timeout: 180_000,
+      env: { TRAILCUT_API_PROXY: 'http://127.0.0.1:8001' },
+    },
+  ],
 });
