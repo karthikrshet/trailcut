@@ -59,7 +59,9 @@ export function ReportView({ report }: { report: Report }) {
           By fund
         </Heading>
         <Box overflowX="auto">
-          <Table data={{ nodes: rows }}>
+          {/* Keep columns readable; narrow screens scroll sideways instead of truncating. */}
+                <Box minWidth="720px">
+                <Table data={{ nodes: rows }}>
             {(items) => (
               <>
                 <TableHeader>
@@ -91,6 +93,7 @@ export function ReportView({ report }: { report: Report }) {
               </>
             )}
           </Table>
+                </Box>
         </Box>
       </Box>
     </Box>

@@ -42,14 +42,16 @@ export function PlanTable({ schemes, decisions }: { schemes: SchemePlan[]; decis
               <Text color="surface.text.gray.muted">No units held in this fund.</Text>
             ) : (
               <Box overflowX="auto">
+                {/* Keep columns readable; narrow screens scroll sideways instead of truncating. */}
+                <Box minWidth="820px">
                 <Table data={{ nodes: rows }}>
                   {(items) => (
                     <>
                       <TableHeader>
                         <TableHeaderRow>
                           <TableHeaderCell>Bought</TableHeaderCell>
-                          <TableHeaderCell>Value</TableHeaderCell>
                           <TableHeaderCell>Do this</TableHeaderCell>
+                          <TableHeaderCell>Value</TableHeaderCell>
                           <TableHeaderCell>Tax</TableHeaderCell>
                           <TableHeaderCell>Exit load</TableHeaderCell>
                           <TableHeaderCell>Why</TableHeaderCell>
@@ -59,10 +61,10 @@ export function PlanTable({ schemes, decisions }: { schemes: SchemePlan[]; decis
                         {items.map((d) => (
                           <TableRow key={d.id} item={d}>
                             <TableCell>{formatDate(d.buy_date)}</TableCell>
-                            <TableCell>{formatINR(d.value_now)}</TableCell>
                             <TableCell>
                               <StatusBadge action={d.action} suffix={when(d)} />
                             </TableCell>
+                            <TableCell>{formatINR(d.value_now)}</TableCell>
                             <TableCell>{d.switch_on ? formatINR(d.tax) : '—'}</TableCell>
                             <TableCell>{d.switch_on ? formatINR(d.exit_load) : '—'}</TableCell>
                             <TableCell>
@@ -74,6 +76,7 @@ export function PlanTable({ schemes, decisions }: { schemes: SchemePlan[]; decis
                     </>
                   )}
                 </Table>
+                </Box>
               </Box>
             )}
             </AccordionItemBody>
