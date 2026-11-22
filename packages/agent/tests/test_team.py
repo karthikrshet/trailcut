@@ -103,6 +103,8 @@ class FakeLLM:
         ("What is an exit load?", Specialist.TEACHER),
         ("Explain XIRR like I'm new to investing", Specialist.TEACHER),
         ("Explain this in Hindi", Specialist.TEACHER),
+        ("What does grandfathering mean?", Specialist.TEACHER),
+        ("What does switching cost me?", Specialist.SWITCH_PLANNER),
     ],
 )
 def test_route(question: str, specialist: Specialist) -> None:
@@ -121,6 +123,8 @@ def test_route(question: str, specialist: Specialist) -> None:
         "Suggest some funds for SIP",
         "Where should I invest 1 lakh?",
         "best funds for 2027",
+        "Recommend me a good small cap fund",
+        "Can you suggest a really solid large cap index fund?",
     ],
 )
 def test_fund_picking_is_refused_without_calling_the_model(ctx: ToolContext, question: str) -> None:

@@ -118,7 +118,7 @@ in. Refer to funds by name, not id."""
 _FUND_PICKING = re.compile(
     r"\b(which|what|best|top|good|better|recommend\w*|suggest\w*)\b.{0,40}\b(fund|scheme|stock|sip)s?\b"
     r".{0,40}\b(buy|invest|pick|choose|start|put)\b"
-    r"|\b(recommend|suggest)\w*\b.{0,20}\b(a|some|any|me)\b.{0,15}\b(fund|scheme|stock)s?\b"
+    r"|\b(recommend|suggest)\w*\b.{0,20}\b(a|some|any|me)\b.{0,40}\b(fund|scheme|stock)s?\b"
     r"|\bwhere\s+should\s+i\s+invest\b|\bbest\s+(mutual\s+)?funds?\b",
     re.IGNORECASE,
 )
@@ -144,7 +144,8 @@ _ROUTES: tuple[tuple[re.Pattern[str], Specialist], ...] = (
     (
         re.compile(
             # "What is XIRR?" is a definition; "What is my XIRR?" asks for the user's number.
-            r"\b(what\s+is|what's|explain|meaning|define|how\s+does|why\s+is\s+there)\b"
+            r"\b(what\s+is|what's|what\s+does(?=.*\bmean\b)|explain|meaning|define|how\s+does"
+            r"|why\s+is\s+there)\b"
             r"(?!\s+(my|our)\b).{0,30}\b"
             r"(xirr|exit\s+load|trail|commission|stcg|ltcg|elss|lock[- ]?in|grandfather\w*|ter"
             r"|expense\s+ratio"
@@ -155,7 +156,7 @@ _ROUTES: tuple[tuple[re.Pattern[str], Specialist], ...] = (
     ),
     (
         re.compile(
-            r"\b(switch|wait|keep|plan|lot|tax|exit\s+load|break[- ]?even|when|timeline"
+            r"\b(switch\w*|wait\w*|keep|plan|lots?|tax|exit\s+load|break[- ]?even|when|timeline"
             r"|ltcg|stcg|elss)\b",
             re.I,
         ),
