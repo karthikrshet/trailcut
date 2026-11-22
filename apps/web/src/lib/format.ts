@@ -106,3 +106,42 @@ export function formatDate(iso: string): string {
   }
   return `${String(day)} ${MONTHS[month - 1] ?? ""} ${String(year)}`;
 }
+
+/**
+ * Format a fraction string as a percent: '0.1171' -> '11.71%'.
+ *
+ * @example formatPercent('0.0175') // "1.75%"
+ */
+export function formatPercent(fraction: string, digits = 2): string {
+  assertDecimal(fraction);
+  const percent = fraction;
+  const fmt = new Intl.NumberFormat('en-IN', {
+    minimumFractionDigits: digits,
+    maximumFractionDigits: digits,
+  });
+  // Move the decimal point two places right exactly (no float multiply).
+  const negative = percent.startsWith('-');
+  const unsigned = negative ? percent.slice(1) : percent;
+  const [whole = '0', frac = ''] = unsigned.split('.');
+  const padded = frac.padEnd(2, '0');
+  const shifted = `${whole}${padded.slice(0, 2)}.${padded.slice(2) || '0'}`;
+  return `${negative ? '-' : ''}${fmt.format(asIntl(shifted.replace(/^0+(?=\d)/, '')))}%`;
+}
+
+/**
+ * Plain-language duration from a month count.
+ *
+ * @example formatMonths(14) // "1 year 2 months"
+ */
+export function formatMonths(months: number): string {
+  if (!Number.isInteger(months) || months < 0) {
+    throw new RangeError(`formatMonths expects a whole number of months, got ${String(months)}`);
+  }
+  if (months === 0) return 'right away';
+  const years = Math.floor(months / 12);
+  const rest = months % 12;
+  const parts: string[] = [];
+  if (years) parts.push(`${String(years)} year${years === 1 ? '' : 's'}`);
+  if (rest) parts.push(`${String(rest)} month${rest === 1 ? '' : 's'}`);
+  return parts.join(' ');
+}
