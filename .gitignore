@@ -1,3 +1,28 @@
+# ---------------------------------------------------------------------------
+# TrailCut .gitignore: only source, config, docs and fixtures belong in git.
+# tests/test_repo_policy.py checks the privacy-critical entries stay here.
+# ---------------------------------------------------------------------------
+
+# Privacy: user statements must never be committed (CLAUDE.md rule 4)
+*.pdf
+!tests/fixtures/**/synthetic_*.pdf
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+
+# App caches and local data (public AMFI files, never user data, but not source)
+.cache/
+*.sqlite
+*.sqlite3
+*.db
+
 # Python
 __pycache__/
 *.py[cod]
@@ -14,33 +39,36 @@ htmlcov/
 dist/
 build/
 
-# Node
+# Node / web
 node_modules/
 apps/web/dist/
 apps/web/coverage/
 apps/web/test-results/
 apps/web/playwright-report/
 apps/web/blob-report/
+.vite/
 *.tsbuildinfo
 
-# Env / secrets
-.env
-.env.*
-!.env.example
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Privacy: user statements must never be committed (CLAUDE.md rule 4)
-*.pdf
-!tests/fixtures/**/synthetic_*.pdf
+# Eval run outputs
+evals/results/
 
 # OS / editors
 .DS_Store
 Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
 .idea/
 .vscode/*
 !.vscode/extensions.json
 
 # Claude local settings
 .claude/settings.local.json
-
-# Eval run outputs
-evals/results/

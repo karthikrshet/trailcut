@@ -193,3 +193,32 @@ def test_no_real_statements_are_committed() -> None:
 )
 def test_monorepo_layout_exists(path: str) -> None:
     assert (ROOT / path).is_dir()
+
+
+@pytest.mark.parametrize(
+    "pattern",
+    [
+        "*.pdf",  # user statements (privacy)
+        ".env",  # secrets
+        ".env.*",
+        "*.pem",
+        "*.key",
+        ".cache/",  # AMFI market cache
+        ".venv/",
+        "node_modules/",
+        "evals/results/",
+    ],
+)
+def test_gitignore_keeps_private_and_generated_files_out(pattern: str) -> None:
+    lines = (ROOT / ".gitignore").read_text(encoding="utf-8").splitlines()
+    assert pattern in lines, f".gitignore must ignore {pattern}"
+
+
+def test_no_generated_or_secret_files_are_tracked() -> None:
+    tracked = _git_ls_files()
+    banned = re.compile(
+        r"(^|/)(node_modules|\.venv|__pycache__|\.cache|test-results|playwright-report|htmlcov)/"
+        r"|\.(pyc|log|pem|key|sqlite3?|db)$|(^|/)\.env(\.|$)|(^|/)coverage\.xml$"
+    )
+    offenders = [f for f in tracked if banned.search(f) and not f.endswith(".env.example")]
+    assert offenders == [], f"generated or secret files are tracked: {offenders}"
