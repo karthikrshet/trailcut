@@ -66,4 +66,20 @@ test.describe('sample portfolio journey', () => {
     await page.getByRole('button', { name: 'Start again' }).click();
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
   });
+
+  test('estimates commission without a statement', async ({ page }) => {
+    await page.goto('/');
+    await page.getByRole('button', { name: 'Estimate my commission' }).click();
+    await expect(page.getByRole('heading', { name: /Commission would cost you/ })).toBeVisible({ timeout: 30_000 });
+    await expect(page.getByText(/in extra fees in the first year/)).toBeVisible();
+  });
+
+  test('switches to dark mode and remembers it', async ({ page }) => {
+    await page.goto('/');
+    const toggle = page.getByRole('switch', { name: 'Dark mode' });
+    await toggle.dispatchEvent('click');
+    await expect(toggle).toBeChecked();
+    await page.reload();
+    await expect(page.getByRole('switch', { name: 'Dark mode' })).toBeChecked();
+  });
 });
