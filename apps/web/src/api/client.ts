@@ -1,4 +1,12 @@
-import type { ApiErrorBody, AssumptionsUpdate, ChatResponse, ChatTurn, SessionResponse } from './types';
+import type {
+  ApiErrorBody,
+  AssumptionsUpdate,
+  ChatResponse,
+  ChatTurn,
+  EstimateRequest,
+  EstimateResponse,
+  SessionResponse,
+} from './types';
 
 const BASE = (import.meta.env.VITE_API_URL as string | undefined) ?? '/api';
 
@@ -46,6 +54,12 @@ export function createClient(fetchImpl: Fetch = (input, init) => fetch(input, in
   }
 
   return {
+    estimate: (body: EstimateRequest) =>
+      request<EstimateResponse>('/v1/estimate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      }),
     sample: () => request<SessionResponse>('/v1/sessions/sample', { method: 'POST' }),
     upload: (file: File, password: string) => {
       const form = new FormData();

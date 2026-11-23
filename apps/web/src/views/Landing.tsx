@@ -24,6 +24,9 @@ import {
   LuUserX,
 } from 'react-icons/lu';
 
+import type { EstimateRequest, EstimateResponse } from '../api/types';
+import { Estimator } from '../components/Estimator';
+import { HeroStack } from '../components/HeroStack';
 import { UploadCard } from '../components/UploadCard';
 
 const FEATURES: { Icon: IconType; title: string; body: string }[] = [
@@ -71,10 +74,12 @@ export function Landing({
   onUpload,
   onSample,
   busy,
+  estimate,
 }: {
   onUpload: (file: File, password: string) => void;
   onSample: () => void;
   busy: boolean;
+  estimate: (req: EstimateRequest) => Promise<EstimateResponse>;
 }) {
   const reduce = useReducedMotionConfig();
   const fade = (i: number) => ({
@@ -121,6 +126,9 @@ export function Landing({
               ))}
             </Box>
           </motion.div>
+          <Box display={{ base: 'none', l: 'block' }}>
+            <HeroStack />
+          </Box>
         </Box>
         <UploadCard onUpload={onUpload} onSample={onSample} busy={busy} />
       </Box>
@@ -130,6 +138,10 @@ export function Landing({
           TrailCut reads your CAS, finds the hidden trail commission, and plans the cheapest way out, without guessing
           a single number.
         </Text>
+      </Section>
+
+      <Section>
+        <Estimator estimate={estimate} />
       </Section>
 
       <Section title="How it works">

@@ -34,3 +34,12 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* Print / save as PDF: hide controls, keep content. */
+@media print {
+  .no-print,
+  header,
+  button {
+    display: none !important;
+  }
+}

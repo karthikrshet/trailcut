@@ -1,9 +1,10 @@
-import { Alert, Box, Heading, Switch, Text } from '@razorpay/blade/components';
+import { Alert, Box, Button, Heading, Switch, Text } from '@razorpay/blade/components';
 import { useState } from 'react';
 import { LuArrowRightLeft, LuCalculator, LuClock, LuPiggyBank } from 'react-icons/lu';
 
 import type { AssumptionsUpdate, SwitchPlan, Totals } from '../api/types';
 import { AssumptionsPanel } from '../components/AssumptionsPanel';
+import { downloadCsv, planToCsv } from '../components/exportPlan';
 import { PlanTable } from '../components/PlanTable';
 import { StatCard } from '../components/StatCard';
 import { EmptyBlock } from '../components/StateViews';
@@ -92,9 +93,33 @@ export function PlanView({
       <TerEntry funds={review} busy={busy} onApply={onUpdate} />
 
       <Box display="flex" flexDirection="column" gap="spacing.3">
-        <Heading as="h3" size="medium">
-          Lot by lot
-        </Heading>
+        <Box display="flex" justifyContent="space-between" alignItems="center" flexWrap="wrap" gap="spacing.3">
+          <Heading as="h3" size="medium">
+            Lot by lot
+          </Heading>
+          <div className="no-print">
+            <Box display="flex" gap="spacing.3">
+              <Button
+                variant="secondary"
+                size="small"
+                onClick={() => {
+                  downloadCsv(planToCsv(plan.schemes, plan.decisions), `trailcut-plan-${plan.as_of}.csv`);
+                }}
+              >
+                Download CSV
+              </Button>
+              <Button
+                variant="secondary"
+                size="small"
+                onClick={() => {
+                  window.print();
+                }}
+              >
+                Print or save as PDF
+              </Button>
+            </Box>
+          </div>
+        </Box>
         <PlanTable schemes={plan.schemes} decisions={plan.decisions} />
       </Box>
 

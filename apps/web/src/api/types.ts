@@ -156,6 +156,26 @@ export type AssumptionsUpdate = Partial<{
   ter_overrides: Record<string, { regular_percent: Decimal; direct_percent: Decimal }>;
 }>;
 
+export type EstimateRequest = {
+  lump_sum: Decimal;
+  monthly_sip: Decimal;
+  years: number;
+  ter_regular_percent: Decimal;
+  ter_direct_percent: Decimal;
+  expected_return_percent: Decimal;
+};
+
+export type EstimateResponse = {
+  years: number;
+  invested: Decimal;
+  regular_value: Decimal;
+  direct_value: Decimal;
+  leak: Decimal;
+  leak_share: Decimal;
+  first_year_fees_gap: Decimal;
+  series: { year: number; invested: Decimal; regular: Decimal; direct: Decimal }[];
+};
+
 export type ChatTurn = { role: 'user' | 'assistant'; content: string };
 
 export type ChatResponse = {

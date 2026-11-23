@@ -6,6 +6,7 @@ import { ChatDrawer } from './components/ChatDrawer';
 import { ProcessingSteps } from './components/ProcessingSteps';
 import { ErrorBlock } from './components/StateViews';
 import { useSession } from './state/useSession';
+import { ThemeToggle } from './theme';
 import { Landing } from './views/Landing';
 import { Workspace } from './views/Workspace';
 
@@ -31,14 +32,24 @@ export function App({ client }: { client?: Client }) {
           <Text weight="semibold" size="large">
             TrailCut
           </Text>
-          <Text size="small" color="surface.text.gray.muted">
-            Cut the commission, not your returns.
-          </Text>
+          <Box display="flex" alignItems="center" gap="spacing.5">
+            <Box display={{ base: 'none', m: 'block' }}>
+              <Text size="small" color="surface.text.gray.muted">
+                Cut the commission, not your returns.
+              </Text>
+            </Box>
+            <ThemeToggle />
+          </Box>
         </Box>
       </Box>
       <Box as="main" maxWidth="1120px" marginX="auto" paddingX={{ base: 'spacing.5', m: 'spacing.8' }}>
         {state.status === 'idle' ? (
-          <Landing onUpload={(f, p) => void upload(f, p)} onSample={() => void startSample()} busy={false} />
+          <Landing
+            onUpload={(f, p) => void upload(f, p)}
+            onSample={() => void startSample()}
+            busy={false}
+            estimate={(req) => api.estimate(req)}
+          />
         ) : null}
         {state.status === 'loading' ? (
           <Box paddingY="spacing.11" maxWidth="480px" marginX="auto">
