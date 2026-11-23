@@ -166,7 +166,7 @@ the engine, Hindi and Kannada explanations.
 
 ## License
 
-MIT. Data: AMFI; statement parsing by [casparser](https://github.com/codereverser/casparser) (MIT).
+MIT © 2026 Karthik Rajesh Shet. See [LICENSE](LICENSE).
 
 *Not investment advice. TrailCut is a calculator; check with a SEBI-registered adviser
 before acting.*
