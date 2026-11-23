@@ -6,6 +6,7 @@ import pytest
 from hypothesis import HealthCheck, given, settings
 from hypothesis import strategies as st
 
+from trailcut_engine.dates import add_years
 from trailcut_engine.market import ExitLoadRule, ExitLoadTier, MarketData, SchemeMarket
 from trailcut_engine.planner import (
     Action,
@@ -347,7 +348,7 @@ def test_plan_invariants(pm: tuple[Portfolio, MarketData]) -> None:
         assert d.tax >= 0
         assert d.net_benefit > 0 or d.action is Action.SWITCH_NOW
         if d.scheme_id in elss:
-            assert d.switch_on >= d.buy_date.replace(year=d.buy_date.year + 3) - timedelta(days=1)
+            assert d.switch_on >= add_years(d.buy_date, 3)
     # The yearly exemption is never over-used.
     for f in sp.fy_tax:
         assert f.exemption_used <= RULES.equity.ltcg_exemption_per_fy.value
@@ -367,3 +368,11 @@ def test_plan_invariants(pm: tuple[Portfolio, MarketData]) -> None:
 def test_plan_is_deterministic_for_random_inputs(pm: tuple[Portfolio, MarketData]) -> None:
     p, m = pm
     assert plan(p, m) == plan(p, m)
+
+
+def test_elss_bought_on_29_february_unlocks_on_28_february() -> None:
+    """Found by Hypothesis: lock-in arithmetic must survive leap days."""
+    s = make_scheme([buy(date(2020, 2, 29), "1", "10")], nav="10", is_elss=True)
+    d = only(plan(portfolio(s), market(SchemeMarket(ter_regular=D("0.02"), ter_direct=D("0.01")))))
+    if d.switch_on is not None:
+        assert d.switch_on >= date(2023, 2, 28)

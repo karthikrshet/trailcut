@@ -2,6 +2,7 @@ from datetime import date
 
 import pytest
 
+from trailcut_engine.dates import add_years
 from trailcut_engine.portfolio import AssetClass, Plan, Portfolio, StatementSource, TxnKind
 from trailcut_ingest.pii import contains_pii
 from trailcut_ingest.sample import load_sample_portfolio, sample_cas_dict
@@ -64,8 +65,8 @@ def test_has_elss_lots_inside_and_outside_lock_in(sample: Portfolio) -> None:
     assert elss.is_elss
     buys = [t.date for t in elss.transactions if t.is_unit_inflow]
     as_of = sample.statement_to
-    assert any(d.replace(year=d.year + 3) <= as_of for d in buys)
-    assert any(d.replace(year=d.year + 3) > as_of for d in buys)
+    assert any(add_years(d, 3) <= as_of for d in buys)
+    assert any(add_years(d, 3) > as_of for d in buys)
 
 
 def test_has_debt_lots_before_and_after_april_2023(sample: Portfolio) -> None:

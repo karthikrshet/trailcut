@@ -6,6 +6,7 @@ from pathlib import Path
 
 import pytest
 
+from trailcut_engine.dates import add_years
 from trailcut_engine.market import SchemeMarket, market_for_portfolio
 from trailcut_engine.planner import Action, Assumptions, Reason, SwitchPlan, plan_switch
 from trailcut_engine.summary import summarize
@@ -65,7 +66,7 @@ def test_balanced_advantage_waits_until_long_term(plan: SwitchPlan) -> None:
 def test_elss_lots_switch_only_after_lock_in(plan: SwitchPlan) -> None:
     for d in plan.decisions:
         if d.scheme_id == "F2-S1" and d.switch_on is not None:
-            assert d.switch_on >= d.buy_date.replace(year=d.buy_date.year + 3)
+            assert d.switch_on >= add_years(d.buy_date, 3)
 
 
 def test_flexi_cap_uses_both_years_exemptions(plan: SwitchPlan) -> None:
