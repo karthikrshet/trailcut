@@ -100,6 +100,19 @@ class ChatResponse(BaseModel):
     disclaimer: str = DISCLAIMER
 
 
+class EstimateRequest(BaseModel):
+    """Quick estimate inputs; percentages as typed (1.65 = 1.65%)."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    lump_sum: Annotated[DecimalField, Field(ge=0)] = Decimal(0)
+    monthly_sip: Annotated[DecimalField, Field(ge=0)] = Decimal(0)
+    years: Annotated[int, Field(ge=1, le=40)] = 10
+    ter_regular_percent: Annotated[DecimalField, Field(ge=0, le=5)]
+    ter_direct_percent: Annotated[DecimalField, Field(ge=0, le=5)]
+    expected_return_percent: Annotated[DecimalField, Field(ge=-20, le=30)] = Decimal(12)
+
+
 class Meta(BaseModel):
     disclaimer: str
     tax_years: tuple[str, ...]

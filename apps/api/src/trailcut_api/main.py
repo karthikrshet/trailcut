@@ -19,7 +19,7 @@ from fastapi import FastAPI, File, Form, Request, Response, UploadFile
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-from pydantic import BaseModel, ConfigDict, SecretStr
+from pydantic import BaseModel, ConfigDict, SecretStr, ValidationError
 
 from trailcut_agent.llm import ClaudeLLM
 from trailcut_agent.team import AgentTeam
@@ -33,12 +33,14 @@ from trailcut_api.schemas import (
     ChatRequest,
     ChatResponse,
     ErrorResponse,
+    EstimateRequest,
     Meta,
     SessionResponse,
     TraceStepOut,
 )
 from trailcut_api.sessions import Session, SessionNotFoundError, SessionStore
 from trailcut_api.settings import Settings
+from trailcut_engine.estimate import Estimate, EstimateInput, estimate_commission
 from trailcut_engine.planner import Assumptions, SwitchPlan, plan_switch
 from trailcut_engine.report import Report, build_report
 from trailcut_engine.tax_rules import TaxRules, parse_tax_rules
@@ -234,6 +236,32 @@ def create_app(  # noqa: PLR0915 - route table
             chat_mode="llm" if ctx.team.llm is not None else "offline",
             data_sources=("AMFI (NAV, TER)", "casparser (CAS parsing, MIT)", "data/tax_rules"),
         )
+
+    @app.post(
+        "/v1/estimate",
+        tags=["estimate"],
+        responses={422: {"model": ErrorResponse}, 429: {"model": ErrorResponse}},
+    )
+    def estimate(body: EstimateRequest, request: Request) -> Estimate:
+        """Commission estimate from typed numbers; no statement or session needed."""
+        rate_limit(request)
+        try:
+            inp = EstimateInput(
+                lump_sum=body.lump_sum,
+                monthly_sip=body.monthly_sip,
+                years=body.years,
+                ter_regular=body.ter_regular_percent / HUNDRED,
+                ter_direct=body.ter_direct_percent / HUNDRED,
+                expected_return=body.expected_return_percent / HUNDRED,
+            )
+        except ValidationError as exc:
+            message = str(exc.errors()[0].get("msg", "Check your numbers.")).removeprefix(
+                "Value error, "
+            )
+            raise ApiError(
+                422, "invalid_request", message[:1].upper() + message[1:] + "."
+            ) from None
+        return estimate_commission(inp)
 
     @app.post("/v1/sessions/sample", tags=["sessions"], status_code=201)
     def create_sample() -> SessionResponse:
