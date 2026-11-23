@@ -5,7 +5,7 @@
 **Cut the commission, not your returns.**
 
 [![CI](https://github.com/karthikrshet/trailcut/actions/workflows/ci.yml/badge.svg)](https://github.com/karthikrshet/trailcut/actions/workflows/ci.yml)
-![Tests](https://img.shields.io/badge/tests-1%2C311%20passing-brightgreen)
+![Tests](https://img.shields.io/badge/tests-1%2C340%2B%20passing-brightgreen)
 ![Engine coverage](https://img.shields.io/badge/engine%20coverage-%E2%89%A590%25-brightgreen)
 ![Invented numbers in evals](https://img.shields.io/badge/invented%20numbers-0-brightgreen)
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
@@ -39,15 +39,24 @@ long-term capital-gains tax, the yearly LTCG exemption, ELSS lock-ins, exit load
 - **Baselines**: compared with "switch everything today" and "never switch", plus
   break-even.
 - **What-if assumptions**: return, tax slab, horizon, exemption use, expense ratios.
+- **No statement? Quick estimate**: type an amount, SIP, years and two expense ratios to
+  see the commission leak in seconds, calculated by the same engine.
+- **Download or print**: export the plan as CSV, or print / save it as a PDF.
+- **Dark mode** and a 3D landing hero that tilts with your pointer (static with
+  reduced motion).
 - **Ask the AI**: an agent team that explains your plan and only quotes numbers the
   calculator produced.
 - **Private by design**: the PDF is read in memory, PII is masked, nothing is stored.
 
 ## Screenshots
 
-| Landing | Switch plan | Ask the AI |
+| Landing with 3D hero | Switch plan | Ask the AI |
 | --- | --- | --- |
 | ![Landing](docs/screenshots/landing-desktop.png) | ![Plan](docs/screenshots/plan-desktop.png) | ![Chat](docs/screenshots/chat-desktop.png) |
+
+| Quick estimate (no statement) | Dark mode |
+| --- | --- |
+| ![Estimate](docs/screenshots/estimate-desktop.png) | ![Dark mode](docs/screenshots/report-dark-desktop.png) |
 
 On a phone (375 px):
 

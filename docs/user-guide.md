@@ -6,6 +6,15 @@ explainer, not investment advice: it never recommends funds and never places ord
 
 ![Landing page](screenshots/landing-desktop.png)
 
+## Just curious? Estimate first
+
+No statement handy? Under **No statement? Estimate in 10 seconds** on the home page,
+enter what you've invested, your monthly SIP, the number of years and the Regular and
+Direct expense ratios from a fund's factsheet. You'll see what commission costs over
+that time, and how much of it you pay in the first year.
+
+![Quick estimate](screenshots/estimate-desktop.png)
+
 ## 1. Get your statement (2 minutes)
 
 You need the **Detailed** Consolidated Account Statement (CAS) from CAMS or KFintech.
@@ -69,6 +78,12 @@ If a fund shows *Review* because its expense ratios are missing, enter the **Reg
 and **Direct** TER from the fund's factsheet (for example 1.65 and 0.70) and press
 **Use these expense ratios**.
 
+### Download or print the plan
+
+Under **Lot by lot**, **Download CSV** saves every lot with its action, date, tax, exit
+load and reason (opens in Excel or Google Sheets). **Print or save as PDF** opens your
+browser's print dialog without the buttons.
+
 ## 5. Change the assumptions
 
 Every assumption is visible and editable under **Assumptions**:
@@ -93,7 +108,12 @@ Press **Ask about my plan** and pick a suggestion or type a question, for exampl
 - Questions like "which fund should I buy?" are politely refused.
 - Without an AI key configured, answers come straight from the calculator.
 
-## 7. Delete your data
+## 7. Dark mode
+
+Use the **Dark** switch at the top right. TrailCut follows your device setting until you
+choose, and remembers your choice on this device.
+
+## 8. Delete your data
 
 Press **Delete my data** at any time. Otherwise everything is cleared 30 minutes after
 your last action. TrailCut never stores your PDF, password, PAN, email, phone or folio

@@ -25,5 +25,8 @@ All notable changes to this project are documented here. The format follows
   numeric-claim validator with prompt-injection hardening, offline fallback, evals.
 - Docs: user guide, testing guide, agent design, API reference, runbooks.
 
+- Quick commission estimate without a statement (`POST /v1/estimate` and a landing
+  section), CSV export and print view of the plan, dark mode, and a 3D landing hero.
+
 ### Security
 - Figures inside statement text are never accepted as evidence by the validator.

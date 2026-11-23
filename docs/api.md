@@ -7,6 +7,7 @@ Money, units and rates are **decimal strings**; dates are ISO `YYYY-MM-DD`.
 | --- | --- | --- |
 | GET | `/health` | Liveness, no user data |
 | GET | `/v1/meta` | Disclaimer, tax years loaded, upload limit, session TTL, chat mode |
+| POST | `/v1/estimate` | Lump sum + SIP + years + expense ratios → projected leak (no session) |
 | POST | `/v1/sessions/sample` | Session for the fictional sample portfolio |
 | POST | `/v1/sessions/upload` | Multipart `file` (CAS PDF, < 10 MB) + `password` → session |
 | GET | `/v1/sessions/{id}` | Report + plan + assumptions |
